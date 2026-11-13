@@ -1,0 +1,5732 @@
+{
+ "settings": {
+  "showSourceLink": false
+ },
+ "recipes": [
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1794598651819,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": null,
+     "name": "beef mince",
+     "note": "high fat percentage recommended!",
+     "q": 500,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "garlic cloves",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "tomato paste",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "harissa paste",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "shallot",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": "Yoghurt",
+     "name": "greek yoghurt",
+     "note": "big",
+     "q": 3,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Yoghurt",
+     "name": "garlic clove",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Yoghurt",
+     "name": "lemon",
+     "note": "Half a lemon, juiced",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Pickled veg",
+     "name": "radishes",
+     "note": "Handful of",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Pickled veg",
+     "name": "cucumber",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Pickled veg",
+     "name": "white wine vinegar",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Pickled veg",
+     "name": "salt",
+     "note": "Pinch",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Pickled veg",
+     "name": "sugar",
+     "note": "Pinch",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "other",
+     "gpc": null,
+     "group": "Pickled veg",
+     "name": "Water",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "To serve",
+     "name": "Pomegranate seeds & parsley",
+     "note": "to serve",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "title",
+     "note": "The post has no title; named from its own line (harissa beef mince on garlicky yoghurt with pickled crunchy veg)"
+    }
+   ],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@natsnourishments",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DcRQkcXIvM7/"
+   },
+   "steps": [
+    "Cube the cucumber and radish and add to a container with the remaining pickle ingredients, then top up so it's just covered with water. Mix well and set aside.",
+    "Grate the garlic into a bowl and top with the lemon juice and salt. Add the yoghurt, mix well and set aside.",
+    "Fry the diced shallot in olive oil for a few minutes, then add the minced garlic, tomato paste and harissa paste. Cook this out for a minute or so, then go in with the beef mince. Break it all up and cook it out so you get some crispy bits.",
+    "Spread the yoghurt on a plate and top with the beef mince, pickled veg, a sprinkle of pomegranate seeds, some fresh parsley and a big drizzle of olive oil. Serve with warm flatbreads."
+   ],
+   "time": null,
+   "title": "Harissa Beef Mince on Garlicky Yoghurt with Pickled Veg",
+   "id": "ig-DcRQkcXIvM7"
+  },
+  {
+   "categories": [
+    "Salads"
+   ],
+   "createdAt": 1794598651818,
+   "favorite": false,
+   "importWarnings": [
+    "'slithered almonds' kept as written (most likely slivered almonds).",
+    "The caption writes '1\\.5 cups' (Instagram escaping); read as 1.5."
+   ],
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "produce",
+     "gpc": 30,
+     "group": "Herby Tahini",
+     "name": "parsley leaves",
+     "note": "loosely packed",
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Herby Tahini",
+     "name": "baby spinach leaves, mint leaves and dill",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "handful"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 240,
+     "group": "Herby Tahini",
+     "name": "tahini",
+     "note": null,
+     "q": 0.3333333333333333,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Herby Tahini",
+     "name": "garlic clove",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Herby Tahini",
+     "name": "lemon",
+     "note": "juice of",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Herby Tahini",
+     "name": "red wine vinegar",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Herby Tahini",
+     "name": "honey",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "other",
+     "gpc": null,
+     "group": "Herby Tahini",
+     "name": "water",
+     "note": null,
+     "q": 0.3333333333333333,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Herby Tahini",
+     "name": "salt",
+     "note": "to taste",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 170,
+     "group": "",
+     "name": "quinoa",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "",
+     "name": "chicken stock",
+     "note": null,
+     "q": 1.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "",
+     "name": "broccolini",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "bunch"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "",
+     "name": "asparagus",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "bunch"
+    },
+    {
+     "aisle": "frozen",
+     "gpc": 135,
+     "group": "",
+     "name": "frozen peas",
+     "note": null,
+     "q": 0.75,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "",
+     "name": "shallots",
+     "note": "finely sliced",
+     "q": 2,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": "",
+     "name": "haloumi",
+     "note": "sliced into triangles",
+     "q": 300,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 110,
+     "group": "",
+     "name": "slithered almonds",
+     "note": null,
+     "q": 0.3333333333333333,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "",
+     "name": "parsley leaves",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "bunch"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "",
+     "name": "mint leaves",
+     "note": "picked",
+     "q": 0.5,
+     "q2": null,
+     "u": "bunch"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "",
+     "name": "dill",
+     "note": "Handful of",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "",
+     "name": "chilli flakes",
+     "note": "pinch",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "",
+     "name": "lemon",
+     "note": "juice of",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "",
+     "name": "olive oil",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "title",
+     "note": "The post has no title; named from its own description (green spring salad, quinoa, halloumi, herby tahini)"
+    }
+   ],
+   "lang": "en",
+   "notes": "Delicious as is or paired with your choice of protein.",
+   "schema": 2,
+   "seasons": [
+    "spring"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@bylaurenmorgan",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DfquhEKBGQQ/"
+   },
+   "steps": [
+    "Start by cooking the quinoa so that it cools while you prep everything else. Combine quinoa and stock and bring to a boil. Put a lid on, turn the heat down to very low and leave for 15 minutes.",
+    "To make the herby sauce, combine all its ingredients and whiz together with a stick blender.",
+    "Sauté the shallots in olive oil for 7 minutes until soft and lightly browned.",
+    "Slice the asparagus and broccolini in half on a diagonal and slice the broccolini again in half lengthways. Bring a pot of well salted water to a boil. Turn down to a simmer and blanch the broccolini and asparagus for 2 1/2 minutes or until just tender. Defrost the frozen peas.",
+    "Pan fry the haloumi in olive oil until golden brown. Toast the slithered almonds in a dry pan until lightly browned.",
+    "Assemble the salad by combining quinoa, veggies, shallots, 3/4 of the slithered almonds, haloumi, mint, parsley, dill, juice of 1 lemon, olive oil and a pinch of chilli flakes. Toss to combine.",
+    "Spread the herby tahini sauce on a serving dish and top with the salad and the remaining slithered almonds."
+   ],
+   "time": null,
+   "title": "Green Spring Quinoa Salad with Halloumi and Herby Tahini",
+   "id": "ig-DfquhEKBGQQ"
+  },
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1794343178380,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": null,
+     "name": "bone-in, skin-on chicken thighs",
+     "note": null,
+     "q": 4,
+     "q2": 6,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "avocado oil",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "large onion",
+     "note": "finely chopped",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "fresh ginger",
+     "note": "grated",
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "garlic",
+     "note": "grated",
+     "q": 3,
+     "q2": null,
+     "u": "cloves"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "garam masala",
+     "note": "heaping; or curry powder",
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "ground cumin",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "ground turmeric",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "cilantro",
+     "note": "stems finely chopped, leaves reserved for garnish",
+     "q": 0.5,
+     "q2": null,
+     "u": "head"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 185,
+     "group": null,
+     "name": "basmati rice",
+     "note": "rinsed",
+     "q": 1.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "full-fat coconut milk",
+     "note": "400 ml",
+     "q": 1,
+     "q2": null,
+     "u": "can"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "chicken stock",
+     "note": "or water",
+     "q": 1.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "lime",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "jalapeño or serrano chili",
+     "note": "optional; chopped, or 1 teaspoon chili powder",
+     "q": 1,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "time",
+     "note": "The page gives prep 10 minutes and cook 45 minutes; total of 55 added up here"
+    }
+   ],
+   "lang": "en",
+   "notes": "Any large pot that goes from stovetop to oven with a fitting lid works; a Dutch oven is perfect. Rice still firm: lid back on with a small splash of stock or water for a few more minutes. Tastes flat: one more pinch of salt or squeeze of lime. Leftovers keep covered in the fridge for a few days; reheat covered with a splash of water or stock.",
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": 4,
+   "servingsText": "4",
+   "source": {
+    "author": "Eden Grinshpan",
+    "recipeUrl": "https://edeneats.com/blogs/recipes/one-pot-coconut-chicken-and-rice",
+    "url": "https://edeneats.com/blogs/recipes/one-pot-coconut-chicken-and-rice"
+   },
+   "steps": [
+    "Preheat the oven to {{425F}}. Season the chicken thighs well on both sides with salt and pepper.",
+    "Sear the chicken: heat the avocado oil in a large oven-safe pot with a lid. Sear the thighs on both sides until golden, then take them out and set them aside on a plate.",
+    "Sauté the onion: add the chopped onion to the same pot, season with salt and pepper and sauté until it's soft and lightly golden.",
+    "Add the aromatics and spices: stir in the grated ginger, grated garlic, garam masala, cumin and turmeric (plus the chili, if you're using it). Sauté for a minute to release all that flavor.",
+    "Stir in the chopped cilantro stems. Save the leaves for the end.",
+    "Rinse the basmati rice well, then add it to the pot and stir so every grain gets coated in the onion and spice mixture.",
+    "Pour in the coconut milk and chicken stock. Scrape up all the bits stuck to the bottom of the pot, then season with another pinch of salt.",
+    "Nestle the chicken back into the pot skin side up, cover with the lid and roast for 30 minutes.",
+    "Uncover and roast for another 10 minutes so the skin gets its color back.",
+    "Finish and serve: take the pot out of the oven, zest the lime over the top, squeeze over the juice and shower everything with the cilantro leaves. Serve straight from the pot."
+   ],
+   "time": 55,
+   "timeText": "Prep 10 minutes, cook 45 minutes",
+   "title": "One-Pot Coconut Chicken and Rice",
+   "id": "web-edeneats-coconut-chicken-rice"
+  },
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1794341100376,
+   "favorite": false,
+   "importWarnings": [
+    "The ingredient list says 'fried oregano' under to serve, while the last step says dried oregano. Kept as the ingredient list writes it.",
+    "'red wine vin' is kept as written (most likely red wine vinegar).",
+    "The blog text mentions lemon juice in the chopped salad, but the recipe card and the steps do not; left out of the salad."
+   ],
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "bakery",
+     "gpc": null,
+     "group": "arayes",
+     "name": "pitas",
+     "note": "sliced in half",
+     "q": 2,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": "arayes",
+     "name": "ground beef",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "lb"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "arayes",
+     "name": "red onion",
+     "note": "finely chopped (about 1/4 cup)",
+     "q": 0.25,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "arayes",
+     "name": "giant clove garlic",
+     "note": "grated (or 2 regular cloves)",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "arayes",
+     "name": "dried oregano",
+     "note": "heaping",
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "arayes",
+     "name": "paprika",
+     "note": "heaping",
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "arayes",
+     "name": "kosher salt",
+     "note": null,
+     "q": 1.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "arayes",
+     "name": "cracked black pepper",
+     "note": "to taste",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "dairy",
+     "gpc": 245,
+     "group": "tzatziki",
+     "name": "full-fat Greek yogurt",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "tzatziki",
+     "name": "Persian cucumbers",
+     "note": "grated and squeezed, juice removed",
+     "q": 2,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "tzatziki",
+     "name": "garlic",
+     "note": "grated",
+     "q": 1,
+     "q2": null,
+     "u": "clove"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "tzatziki",
+     "name": "lemon",
+     "note": "juice of",
+     "q": 0.5,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": 9,
+     "group": "tzatziki",
+     "name": "fresh dill",
+     "note": "finely chopped",
+     "q": 0.3333333333333333,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "tzatziki",
+     "name": "kosher salt",
+     "note": "to taste",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "chopped salad",
+     "name": "tomato",
+     "note": "finely chopped",
+     "q": 0.5,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "chopped salad",
+     "name": "small Persian cucumbers",
+     "note": "finely chopped",
+     "q": 2,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "chopped salad",
+     "name": "red onion",
+     "note": "finely chopped",
+     "q": 0.25,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "chopped salad",
+     "name": "extra virgin olive oil",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "chopped salad",
+     "name": "red wine vin",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "chopped salad",
+     "name": "salt",
+     "note": "to taste",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "to serve",
+     "name": "fresh dill and fried oregano",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "time",
+     "note": "The page gives prep 15 minutes and cook 10 minutes; total of 25 added up here"
+    },
+    {
+     "field": "title",
+     "note": "The page writes the title in lowercase; written here in title case"
+    }
+   ],
+   "lang": "en",
+   "notes": "Squeeze the grated cucumbers well, or the tzatziki turns watery. The tzatziki and the beef filling can both be made ahead and kept covered in the fridge; keep the chopped salad undressed until right before serving. Best fresh out of the pan, so sear only what you're eating.",
+   "schema": 2,
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "servings": 4,
+   "servingsText": "4 arayes",
+   "source": {
+    "author": "Eden Grinshpan",
+    "recipeUrl": "https://edeneats.com/blogs/recipes/greek-inspired-cheat-arayes-with-dill-tzatziki",
+    "url": "https://edeneats.com/blogs/recipes/greek-inspired-cheat-arayes-with-dill-tzatziki"
+   },
+   "steps": [
+    "Prep the pitas: slice each of the two pitas around the edges so that you have two flat pieces. Set them aside while you make everything else.",
+    "Mix the filling: in a bowl, combine the ground beef, finely chopped red onion, grated garlic, dried oregano and paprika. Season generously with kosher salt and cracked black pepper, then bring it all together until everything is evenly mixed.",
+    "Spread and press the beef mixture onto the inside part of each pita half. It should be spread all the way to the edges. The meat will shrink while it cooks.",
+    "Make the tzatziki: grate the Persian cucumbers and squeeze out as much juice as you can. Add them to a bowl with the full-fat Greek yogurt, garlic, lemon juice and chopped dill. Season well with kosher salt and stir.",
+    "Chop the salad: finely chop the tomato, Persian cucumbers and red onion. Toss with olive oil, red wine vin and season with salt.",
+    "Sear the pitas: in a hot pan with a little drizzle of olive oil, place the arayes meat side down and sear until the meat is golden and crisp, around 2 min, then flip over and toast a couple more minutes on the pita side.",
+    "Pile it on: top each hot pita with the chopped salad, a big spoonful of tzatziki and plenty of fresh dill. Sprinkle over some dried oregano and eat right away, while the bread is still crunchy."
+   ],
+   "time": 25,
+   "timeText": "Prep 15 minutes, cook 10 minutes",
+   "title": "Greek-Inspired Cheat Arayes with Dill Tzatziki",
+   "id": "web-edeneats-greek-arayes"
+  },
+  {
+   "categories": [
+    "Drinks"
+   ],
+   "createdAt": 1793354877105,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": 145,
+     "group": null,
+     "name": "black sesame seeds",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "other",
+     "gpc": null,
+     "group": null,
+     "name": "water",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "vanilla powder",
+     "note": "or 1 heaping tbsp vanilla bean paste added after slightly cooled",
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "maple syrup",
+     "note": null,
+     "q": 0.75,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "miso",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "salt",
+     "note": "Pinch",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "title",
+     "note": "The post calls it black sesame miso syrup and, above the recipe, Black Sesame Syrup; written in title case"
+    }
+   ],
+   "lang": "en",
+   "notes": "One of her seasonal syrups; nothing in it is strictly seasonal, but it's giving spooky vibes.",
+   "plate": "p3",
+   "schema": 2,
+   "seasons": [
+    "fall"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@holisticrendezvous",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DfFPSErhAkD/"
+   },
+   "steps": [
+    "Lightly toast the black sesame seeds, then blend them to a rough powder. You can also buy black sesame seed powder.",
+    "Combine with the rest of the ingredients and bring to a simmer for 10-15 minutes. Strain."
+   ],
+   "time": null,
+   "title": "Black Sesame Miso Syrup",
+   "id": "ig-DfFPSErhAkD"
+  },
+  {
+   "categories": [
+    "Breakfast",
+    "Baking"
+   ],
+   "createdAt": 1793214952185,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "small brown bananas",
+     "note": "or one large",
+     "q": 2,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "almond butter",
+     "note": "mine is from @vilgain, code JULES",
+     "q": 60,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "olive oil",
+     "note": null,
+     "q": 50,
+     "q2": null,
+     "u": "ml"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "vanilla extract",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "salt",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "maple syrup",
+     "note": "I used @buckwud_organic_maple",
+     "q": 100,
+     "q2": null,
+     "u": "ml"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Jumbo Oats",
+     "note": "i used @mornflake",
+     "q": 240,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "cinnamon",
+     "note": "can adjust to taste!",
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "milled flax seeds",
+     "note": null,
+     "q": 20,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "walnuts",
+     "note": "roughly chopped",
+     "q": 30,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "dark chocolate chips",
+     "note": null,
+     "q": 20,
+     "q2": 30,
+     "u": "g"
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "title",
+     "note": "The post has no title; named from its own description (granola mixed with banana bread)"
+    },
+    {
+     "allow": [
+      "tempC:160"
+     ],
+     "field": "temperature",
+     "note": "The post writes 160 °degrees (325F); 160 read as °C"
+    }
+   ],
+   "lang": "en",
+   "notes": "It tastes like granola mixed with banana bread; she uses it in yoghurt bowls and served it with oat milk.",
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@fitfoodiejules",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/De_ZtZUuHZJ/"
+   },
+   "steps": [
+    "Preheat the oven to {{160C}} (she also gives {{325F}}). Mash the banana, then mix in the remaining wet ingredients.",
+    "Add the dry ingredients and fold everything together until well combined. Spread the granola evenly on a lined baking tray, then bake for 35-45 minutes, mixing halfway through for even baking.",
+    "Remove from the oven and let cool completely, then toss in dark chocolate chips to your liking. Store in an airtight container. Serve with whatever you fancy."
+   ],
+   "time": null,
+   "title": "Banana Bread Granola",
+   "id": "ig-De_ZtZUuHZJ"
+  },
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1793196359663,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Für die Aubergine",
+     "name": "mittelgroße Auberginen",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Für die Aubergine",
+     "name": "Olivenöl",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Für die Aubergine",
+     "name": "Kreuzkümmel",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Für die Aubergine",
+     "name": "Sumach",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Für die Aubergine",
+     "name": "Salz",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Für die Aubergine",
+     "name": "Pfeffer",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": "Für den Tahini Joghurt",
+     "name": "griechischer Joghurt",
+     "note": null,
+     "q": 200,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Für den Tahini Joghurt",
+     "name": "Tahini",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Für den Tahini Joghurt",
+     "name": "Zitrone",
+     "note": "Saft von",
+     "q": 0.5,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Für den Tahini Joghurt",
+     "name": "kleine Knoblauchzehe",
+     "note": "fein gerieben",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Für den Tahini Joghurt",
+     "name": "Salz",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "other",
+     "gpc": null,
+     "group": "Für den Tahini Joghurt",
+     "name": "kaltes Wasser",
+     "note": "weglassen wenn ihr veganen Joghurt oder Joghurt mit weniger Fett nehmt",
+     "q": 1,
+     "q2": 2,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Für die Paprika-Butter-Kichererbsen",
+     "name": "Kichererbsen",
+     "note": "ca. 240 g Abtropfgewicht",
+     "q": 1,
+     "q2": null,
+     "u": "Dose"
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": "Für die Paprika-Butter-Kichererbsen",
+     "name": "Butter",
+     "note": "ca.; oder mehr wenn ihr wollt",
+     "q": 25,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Für die Paprika-Butter-Kichererbsen",
+     "name": "Schalotte",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Für die Paprika-Butter-Kichererbsen",
+     "name": "Paprikamark",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Für die Paprika-Butter-Kichererbsen",
+     "name": "Pul Biber",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Für die Paprika-Butter-Kichererbsen",
+     "name": "Kreuzkümmel",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Für die Paprika-Butter-Kichererbsen",
+     "name": "edelsüßes Paprikapulver",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Für die Paprika-Butter-Kichererbsen",
+     "name": "Salz",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Für die Paprika-Butter-Kichererbsen",
+     "name": "frischer Zitronensaft",
+     "note": "ein bisschen, zum Finish",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Zum Servieren",
+     "name": "Pickled Onions",
+     "note": "oder 1/4 Granatapfel, Kerne ausgelöst",
+     "q": 3,
+     "q2": 4,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Zum Servieren",
+     "name": "Pinienkerne",
+     "note": "optional, geröstet (hab ich vergessen)",
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Zum Servieren",
+     "name": "glatte Petersilie",
+     "note": "grob gehackt",
+     "q": 0.5,
+     "q2": null,
+     "u": "Bund"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Zum Servieren",
+     "name": "Bio-Zitrone",
+     "note": "Abrieb von",
+     "q": 0.5,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Zum Servieren",
+     "name": "Sumach",
+     "note": "extra",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Zum Servieren",
+     "name": "gutes Olivenöl",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "bakery",
+     "gpc": null,
+     "group": "Zum Servieren",
+     "name": "warmes Fladenbrot",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "emoji",
+     "note": "The post's emoji (in the intro line and after the pine nuts) are left out."
+    }
+   ],
+   "lang": "de",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "servings": 2,
+   "servingsText": "Für 2 Personen",
+   "source": {
+    "author": "@beatreaze",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/Dcyv933tw7R/"
+   },
+   "steps": [
+    "Backofen auf {{220C}} Ober-/Unterhitze vorheizen. Auberginenscheiben auf Küchenkrepp auslegen & salzen, ca. 15 min ziehen lassen, mit Zewa abtupfen, wenden und den Vorgang wiederholen. Mit Olivenöl, Kreuzkümmel, Salz, Sumach und etwas Pfeffer einreiben. Auf ein Blech legen und 35-45 Minuten rösten, bis sie weich und an den Rändern crispy sind.",
+    "Joghurt, Tahini, Zitronensaft, Knoblauch und Salz verrühren. Optional 1-2 EL kaltes Wasser dazu.",
+    "Kichererbsen abseihen. Schalotten in einer Pfanne in etwas Öl anrösten. Butter dazugeben und bei mittlerer Hitze schmelzen. Paprikamark dazugeben und etwa 1-2 Minuten anrösten. Pul Biber, Kreuzkümmel und Paprikapulver dazugeben und kurz ziehen lassen. Kichererbsen dazu und 3-5 Minuten in der Paprika-Butter schwenken. Mit Salz, optional mehr Butter und nem Spritzer Zitronensaft abschmecken.",
+    "Tahini-Joghurt großzügig auf Tellern verstreichen. Die Auberginen und die warmen Kichererbsen samt der Butter aus der Pfanne darauf verteilen. Mit Granatapfelkernen oder Pickled Onions und Petersilie garnieren. Zum Schluss mit etwas Sumach bestreuen und mit gutem Olivenöl und noch mehr Tahini beträufeln. Mit warmem Fladenbrot servieren."
+   ],
+   "time": null,
+   "title": "Levantinische Sumach-Aubergine auf Tahinijoghurt + buttrige Kichererbsen",
+   "translations": {
+    "en": {
+     "at": 1793196400847,
+     "incomplete": null,
+     "ingredients": [
+      {
+       "group": "For the eggplant",
+       "name": "medium eggplants",
+       "note": null
+      },
+      {
+       "group": "For the eggplant",
+       "name": "olive oil",
+       "note": null
+      },
+      {
+       "group": "For the eggplant",
+       "name": "cumin",
+       "note": null
+      },
+      {
+       "group": "For the eggplant",
+       "name": "sumac",
+       "note": null
+      },
+      {
+       "group": "For the eggplant",
+       "name": "salt",
+       "note": null
+      },
+      {
+       "group": "For the eggplant",
+       "name": "pepper",
+       "note": null
+      },
+      {
+       "group": "For the tahini yogurt",
+       "name": "Greek yogurt",
+       "note": null
+      },
+      {
+       "group": "For the tahini yogurt",
+       "name": "tahini",
+       "note": null
+      },
+      {
+       "group": "For the tahini yogurt",
+       "name": "lemon",
+       "note": "juice of"
+      },
+      {
+       "group": "For the tahini yogurt",
+       "name": "small garlic clove",
+       "note": "finely grated"
+      },
+      {
+       "group": "For the tahini yogurt",
+       "name": "salt",
+       "note": null
+      },
+      {
+       "group": "For the tahini yogurt",
+       "name": "cold water",
+       "note": "leave out if you use vegan yogurt or lower-fat yogurt"
+      },
+      {
+       "group": "For the paprika butter chickpeas",
+       "name": "chickpeas",
+       "note": "approx. 240 g drained weight",
+       "u": "can"
+      },
+      {
+       "group": "For the paprika butter chickpeas",
+       "name": "butter",
+       "note": "approx.; or more if you like"
+      },
+      {
+       "group": "For the paprika butter chickpeas",
+       "name": "shallot",
+       "note": null
+      },
+      {
+       "group": "For the paprika butter chickpeas",
+       "name": "tomato paste",
+       "note": null
+      },
+      {
+       "group": "For the paprika butter chickpeas",
+       "name": "Aleppo pepper",
+       "note": null
+      },
+      {
+       "group": "For the paprika butter chickpeas",
+       "name": "cumin",
+       "note": null
+      },
+      {
+       "group": "For the paprika butter chickpeas",
+       "name": "sweet paprika powder",
+       "note": null
+      },
+      {
+       "group": "For the paprika butter chickpeas",
+       "name": "salt",
+       "note": null
+      },
+      {
+       "group": "For the paprika butter chickpeas",
+       "name": "fresh lemon juice",
+       "note": "a little, to finish"
+      },
+      {
+       "group": "To serve",
+       "name": "pickled onions",
+       "note": "or 1/4 pomegranate, seeds removed"
+      },
+      {
+       "group": "To serve",
+       "name": "pine nuts",
+       "note": "optional, toasted (I forgot them)"
+      },
+      {
+       "group": "To serve",
+       "name": "flat-leaf parsley",
+       "note": "roughly chopped",
+       "u": "bunch"
+      },
+      {
+       "group": "To serve",
+       "name": "organic lemon",
+       "note": "zest of"
+      },
+      {
+       "group": "To serve",
+       "name": "sumac",
+       "note": "extra"
+      },
+      {
+       "group": "To serve",
+       "name": "good olive oil",
+       "note": null
+      },
+      {
+       "group": "To serve",
+       "name": "warm flatbread",
+       "note": null
+      }
+     ],
+     "notes": null,
+     "servingsText": "Serves 2",
+     "steps": [
+      "Preheat the oven to {{220C}} top/bottom heat. Lay the eggplant slices out on paper towels & salt them, let them sit for approx. 15 min, blot with paper towel, turn them over and repeat the process. Rub with olive oil, cumin, salt, sumac and a little pepper. Place on a baking sheet and roast for 35-45 minutes, until soft and crispy at the edges.",
+      "Stir together the yogurt, tahini, lemon juice, garlic and salt. Optionally add 1-2 tbsp cold water.",
+      "Drain the chickpeas. Sauté the shallots in a pan in a little oil. Add the butter and melt it over medium heat. Add the tomato paste and sauté for about 1-2 minutes. Add the Aleppo pepper, cumin and paprika powder and let them infuse briefly. Add the chickpeas and toss them in the paprika butter for 3-5 minutes. Season with salt, optionally more butter and a squeeze of lemon juice.",
+      "Spread the tahini yogurt generously on plates. Distribute the eggplants and the warm chickpeas, along with the butter from the pan, on top. Garnish with pomegranate seeds or pickled onions and parsley. Finally sprinkle with a little sumac and drizzle with good olive oil and even more tahini. Serve with warm flatbread."
+     ],
+     "title": "Levantine Sumac Eggplant on Tahini Yogurt + Buttery Chickpeas"
+    }
+   },
+   "id": "ig-Dcyv933tw7R"
+  },
+  {
+   "categories": [
+    "Snacks",
+    "Baking"
+   ],
+   "createdAt": 1793177624700,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "seed mix",
+     "note": "she used pumpkin, sunflower, hemp, whole linseeds and poppy seeds; 250g of just one seed also works",
+     "q": 250,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "caraway seeds",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "fennel seeds",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "coriander seeds",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "chia seeds",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "milled flax",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "psyllium husk",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "salt",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "pinches"
+    },
+    {
+     "aisle": "other",
+     "gpc": null,
+     "group": null,
+     "name": "water",
+     "note": null,
+     "q": 200,
+     "q2": null,
+     "u": "ml"
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "title",
+     "note": "The post calls it SUPER SEED CRACKER; written here in title case and plural"
+    }
+   ],
+   "lang": "en",
+   "notes": "The chia, milled flax and psyllium husk are what hold it together; the other seeds can change. Makes one huge sheet. Keeps well in an airtight jar, good for meal prep. Use as a canapé base, for dips, or as a crunchy salad topper.",
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@the_fussyfoodie_",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DepCBLDs3O-/"
+   },
+   "steps": [
+    "Mix everything together, then leave it for 10 minutes. This is the important bit: the chia, flax and psyllium turn into a gel, which binds the seeds and makes it much easier to spread. If you don’t have psyllium, just add a bit more milled flax.",
+    "Spread it thinly over a lined baking tray and bake at {{150C}} for 40 minutes. Let it cool, then break it into shards."
+   ],
+   "time": null,
+   "title": "Super Seed Crackers",
+   "id": "ig-DepCBLDs3O-"
+  },
+  {
+   "categories": [
+    "Mains",
+    "Soups"
+   ],
+   "createdAt": 1793177388474,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": 185,
+     "group": null,
+     "name": "jasmine rice",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": null,
+     "name": "salmon filets",
+     "note": "5oz",
+     "q": 4,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "olive oil",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "garlic powder",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "paprika",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "bok choy",
+     "note": "ends trimmed",
+     "q": 2,
+     "q2": null,
+     "u": "bunches"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "fresh ginger",
+     "note": "minced",
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "garlic",
+     "note": "minced",
+     "q": 1,
+     "q2": null,
+     "u": "clove"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "red or green curry paste",
+     "note": null,
+     "q": 2,
+     "q2": 3,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "coconut milk",
+     "note": null,
+     "q": 0.75,
+     "q2": null,
+     "u": "can"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "chicken bone broth",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "honey",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "soy sauce",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Optional toppings",
+     "name": "sesame seeds",
+     "note": "optional topping",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Optional toppings",
+     "name": "scallion",
+     "note": "optional topping",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Optional toppings",
+     "name": "chili oil",
+     "note": "optional topping",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "title",
+     "note": "The post has no title; named from its first line (crispy air-fried salmon, curry broth)"
+    }
+   ],
+   "lang": "en",
+   "notes": "About 40g protein per bowl, according to the post.",
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@form",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/Derwg2Qp0_3/"
+   },
+   "steps": [
+    "Cook the rice according to the package directions.",
+    "Mix 1½ tbsp of the olive oil with the garlic powder, paprika and a pinch of salt and pepper. Coat the salmon evenly.",
+    "Air-fry the salmon at {{400F}} for about 12 minutes, until cooked through.",
+    "While it cooks, heat the remaining ½ tbsp olive oil in a pan over medium heat. Cook the bok choy 2–3 minutes until tender and lightly browned. Set aside.",
+    "In the same pan, sauté the ginger, garlic and curry paste for about 3 minutes, until fragrant.",
+    "Stir in the coconut milk, broth, honey and soy sauce. Bring to a simmer and cook about 10 minutes.",
+    "Add rice, salmon and bok choy to each bowl, then spoon a generous scoop of broth over the top. Finish with your favorite toppings."
+   ],
+   "time": 30,
+   "timeText": "30 minutes",
+   "title": "Crispy Salmon Curry Bowls",
+   "id": "ig-Derwg2Qp0_3"
+  },
+  {
+   "categories": [
+    "Soups"
+   ],
+   "createdAt": 1793117999999,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Cebolla",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "ajo",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "Dientes"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Tomates secos en aceite",
+     "note": null,
+     "q": 6,
+     "q2": 7,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Setas shiitake",
+     "note": null,
+     "q": 4,
+     "q2": 5,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Garbanzos en conserva",
+     "note": null,
+     "q": 400,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "tomate concentrado",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Especias",
+     "name": "pimentón De la Vera dulce",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Especias",
+     "name": "curry",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Especias",
+     "name": "chilly",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "salsa de soja",
+     "note": "Chorrito",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "drinks",
+     "gpc": null,
+     "group": null,
+     "name": "vino blanco",
+     "note": "opcional",
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "caldo vegetal",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "l"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Leche de coco",
+     "note": null,
+     "q": 400,
+     "q2": null,
+     "u": "ml"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Aove",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Pimienta",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Sal",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "Aove",
+     "note": "Spanish abbreviation for aceite de oliva virgen extra (kept as written)"
+    }
+   ],
+   "lang": "es",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@peace_l0ve_vegan",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DHDx2OYNYQ-/"
+   },
+   "steps": [
+    "Sofríe la cebolla con los dientes de ajo, los tomates secos y las shiitake durante 8-10 minutos. Salpimenta.",
+    "Incorpora los garbanzos, las especias, el tomate concentrado, la salsa de soja y el vino, y cocina 2’ o hasta que se evaporen los líquidos.",
+    "Añade el caldo y la leche vegetal y cocina 20’. Rectifica con caldo si hace falta y sirve con tus toppings favoritos."
+   ],
+   "time": null,
+   "title": "Sopa estilo THAI",
+   "id": "ig-DHDx2OYNYQ-"
+  },
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1793117999998,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": null,
+     "name": "chuck roast",
+     "note": "cut in half",
+     "q": 2,
+     "q2": 3,
+     "u": "lb"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "black pepper",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Salt",
+     "note": "to taste",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "olive oil",
+     "note": "divided",
+     "q": 3,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "yellow onion",
+     "note": "thinly sliced",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "garlic",
+     "note": "cut in half crosswise with tops removed",
+     "q": 2,
+     "q2": null,
+     "u": "heads"
+    },
+    {
+     "aisle": "drinks",
+     "gpc": null,
+     "group": null,
+     "name": "red wine",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "tomato paste",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "worcestershire sauce",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "beef bone broth",
+     "note": null,
+     "q": 6,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "bay leaves",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "fresh thyme",
+     "note": null,
+     "q": 10,
+     "q2": null,
+     "u": "sprigs"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "rosemary",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "sprigs"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "baby potatoes",
+     "note": null,
+     "q": 1.5,
+     "q2": null,
+     "u": "lb"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "large carrots",
+     "note": "cut into 2 inch pieces",
+     "q": 3,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "gluten free or regular all purpose flour",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    }
+   ],
+   "interpretations": [],
+   "lang": "en",
+   "notes": "Serve with a side of creamy mashed potatoes.",
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@caitlinjesson",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/De-Qmc9S3TY/"
+   },
+   "steps": [
+    "Heat the oven to {{325F}}. Season the chuck roast generously with salt and the 1 tbsp black pepper, rubbing it evenly over the meat.",
+    "Heat 2 tbsp olive oil in a Dutch oven over medium-high heat. Sear the meat on all sides until browned, about 3-4 minutes per side. Set it aside.",
+    "Add the remaining 1 tbsp oil and the onions over medium heat and sauté until golden brown and translucent, about 6-8 minutes.",
+    "Deglaze the pan with ¼ cup of the red wine, scraping up anything stuck to the bottom. Keep cooking until the liquid has evaporated and the onions are deep burgundy.",
+    "Stir in the tomato paste and cook for two minutes. Add the broth, the remaining wine, rosemary, thyme, bay leaves, garlic and 1 tsp salt.",
+    "Return the meat to the pot and bring to a simmer. Cover and move to the oven for 2 hours.",
+    "Take the pot out and set the garlic aside. Add the potatoes and carrots, pushing them to the bottom. Squeeze the garlic into the broth and stir, then stack the meat on top of the vegetables so its top is exposed.",
+    "Return to the oven uncovered for 45 minutes.",
+    "Lift out the meat and shred it. Discard the herbs. Whisk 2-3 tbsp of the broth with the 1 tbsp flour in a small bowl until smooth.",
+    "Pour the slurry into the pot and simmer 2-3 minutes until thickened. Return the meat, mix well and serve."
+   ],
+   "time": null,
+   "title": "Pot Roast",
+   "id": "ig-De-Qmc9S3TY"
+  },
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1793117999997,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": null,
+     "name": "bone in skin on chicken thighs and/or drumsticks",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "lb"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "salt",
+     "note": null,
+     "q": 1.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "paprika",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "onion powder",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "garlic powder",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "dried oregano",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "black pepper",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "olive oil",
+     "note": null,
+     "q": 2,
+     "q2": 3,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "yellow onion",
+     "note": "thinly sliced",
+     "q": 0.5,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "fresh thyme",
+     "note": null,
+     "q": 6,
+     "q2": 8,
+     "u": "sprigs"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "chicken bone broth",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "arrowroot or cornstarch",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Cooked white rice",
+     "note": "for serving",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@caitlinjesson",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DeueGzZMZjE/"
+   },
+   "steps": [
+    "Heat the oven to {{350F}}. Put the chicken in a roasting dish and season with the salt, paprika, onion powder, garlic powder, oregano and black pepper. Drizzle with olive oil and toss until evenly coated.",
+    "Add the onions and thyme, then pour the bone broth into the pan, not directly over the chicken, so the seasoning stays on.",
+    "Cover and bake for 1 hour 30 minutes.",
+    "Take the chicken out and raise the oven to {{450F}}.",
+    "Discard the thyme sprigs, then move the chicken to a clean plate.",
+    "Whisk ¼ cup of the pan broth with the 2 tbsp arrowroot until smooth. Whisk this slurry into the rest of the broth, return the chicken and toss to coat in the sauce.",
+    "Return to the oven uncovered for 20 minutes longer, basting every 5 minutes (optional), until golden brown and the gravy has thickened.",
+    "Serve over rice."
+   ],
+   "time": null,
+   "title": "Braised Chicken with Bone Broth Gravy",
+   "id": "ig-DeueGzZMZjE"
+  },
+  {
+   "categories": [
+    "Desserts",
+    "Snacks"
+   ],
+   "createdAt": 1793117999996,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "medjool dates",
+     "note": "pitted",
+     "q": 14,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 240,
+     "group": null,
+     "name": "runny tahini",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "ground hemp seeds",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "dairy",
+     "gpc": 227,
+     "group": null,
+     "name": "butter",
+     "note": "optional - she didn't use it",
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Zest of an orange",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 100,
+     "group": null,
+     "name": "pecans",
+     "note": null,
+     "q": 30,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 100,
+     "group": null,
+     "name": "walnuts",
+     "note": null,
+     "q": 30,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "85% dark chocolate",
+     "note": "melted",
+     "q": 125,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "flaky sea salt",
+     "note": "A good pinch",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": 16,
+   "servingsText": "Makes 16 squares",
+   "source": {
+    "author": "@gqjordannutrition (after @clairesharrynroberto)",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DerrA5HNF4u/"
+   },
+   "steps": [
+    "Roast the nuts at {{180C}} for 10 minutes, tossing halfway.",
+    "Press the dates into a lined tin.",
+    "Scatter the nuts over and press them in.",
+    "Stir the hemp into the tahini and spread it on top.",
+    "Melt the butter and whisk in the orange zest (or sprinkle the zest on top).",
+    "Pour the chocolate on, swirl it and salt it.",
+    "Chill in the fridge for an hour, then slice."
+   ],
+   "time": null,
+   "title": "Roasted Pecan, Walnut + Tahini Date Bars",
+   "translations": {
+    "de": {
+     "at": 1793123990055,
+     "incomplete": null,
+     "ingredients": [
+      {
+       "group": null,
+       "name": "Medjool-Datteln",
+       "note": "entsteint"
+      },
+      {
+       "group": null,
+       "name": "flüssiges Tahini",
+       "note": null
+      },
+      {
+       "group": null,
+       "name": "gemahlene Hanfsamen",
+       "note": null
+      },
+      {
+       "group": null,
+       "name": "Butter",
+       "note": "optional - sie hat sie nicht verwendet"
+      },
+      {
+       "group": null,
+       "name": "Schale einer Orange",
+       "note": null
+      },
+      {
+       "group": null,
+       "name": "Pekannüsse",
+       "note": null
+      },
+      {
+       "group": null,
+       "name": "Walnüsse",
+       "note": null
+      },
+      {
+       "group": null,
+       "name": "85 % Zartbitterschokolade",
+       "note": "geschmolzen"
+      },
+      {
+       "group": null,
+       "name": "Meersalzflocken",
+       "note": "Eine große Prise"
+      }
+     ],
+     "notes": null,
+     "servingsText": "Ergibt 16 Quadrate",
+     "steps": [
+      "Die Nüsse bei {{180C}} 10 Minuten rösten und nach der Hälfte der Zeit durchschwenken.",
+      "Die Datteln in eine ausgelegte Form drücken.",
+      "Die Nüsse darüberstreuen und andrücken.",
+      "Den Hanf in das Tahini rühren und auf dem Ganzen verstreichen.",
+      "Die Butter schmelzen und die Orangenschale unterrühren (oder die Schale oben darüberstreuen).",
+      "Die Schokolade darübergießen, verwirbeln und salzen.",
+      "Eine Stunde im Kühlschrank kühlen, dann in Stücke schneiden."
+     ],
+     "title": "Geröstete Pekannuss-, Walnuss- + Tahini-Dattelriegel"
+    },
+    "es": {
+     "at": 1793123999596,
+     "incomplete": null,
+     "ingredients": [
+      {
+       "group": null,
+       "name": "dátiles medjool",
+       "note": "sin hueso"
+      },
+      {
+       "group": null,
+       "name": "tahini líquido",
+       "note": null
+      },
+      {
+       "group": null,
+       "name": "semillas de cáñamo molidas",
+       "note": null
+      },
+      {
+       "group": null,
+       "name": "mantequilla",
+       "note": "opcional - ella no la usó"
+      },
+      {
+       "group": null,
+       "name": "Ralladura de una naranja",
+       "note": null
+      },
+      {
+       "group": null,
+       "name": "pecanas",
+       "note": null
+      },
+      {
+       "group": null,
+       "name": "nueces",
+       "note": null
+      },
+      {
+       "group": null,
+       "name": "chocolate negro al 85%",
+       "note": "derretido"
+      },
+      {
+       "group": null,
+       "name": "sal marina en escamas",
+       "note": "Una buena pizca"
+      }
+     ],
+     "notes": null,
+     "servingsText": "Rinde 16 cuadrados",
+     "steps": [
+      "Tuesta las nueces a {{180C}} durante 10 minutos, removiéndolas a la mitad.",
+      "Presiona los dátiles en un molde forrado.",
+      "Esparce los frutos secos por encima y presiónalos.",
+      "Mezcla el cáñamo con el tahini y extiéndelo por encima.",
+      "Derrite la mantequilla y bátela con la ralladura de naranja (o espolvorea la ralladura por encima).",
+      "Vierte el chocolate, hazle remolinos y añade la sal.",
+      "Enfría en el refrigerador durante una hora y luego corta."
+     ],
+     "title": "Barritas de dátiles con pecanas tostadas, nueces y tahini"
+    }
+   },
+   "id": "ig-DerrA5HNF4u"
+  },
+  {
+   "categories": [
+    "Breakfast",
+    "Snacks"
+   ],
+   "createdAt": 1793117999995,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": 118,
+     "group": "Pumpkin Seed Butter",
+     "name": "raw shelled pumpkin seeds",
+     "note": "2 cups, also called pepitas",
+     "q": 236,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Pumpkin Seed Butter",
+     "name": "kosher salt",
+     "note": "plus more as needed",
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Jammy Fig Toast (Optional)",
+     "name": "figs",
+     "note": null,
+     "q": 2,
+     "q2": 3,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Jammy Fig Toast (Optional)",
+     "name": "oil",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Jammy Fig Toast (Optional)",
+     "name": "agave syrup",
+     "note": "plus more as needed",
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "bakery",
+     "gpc": null,
+     "group": "Jammy Fig Toast (Optional)",
+     "name": "whole grain sourdough bread",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "slice"
+    }
+   ],
+   "interpretations": [],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "summer",
+    "fall"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@plantbasedrd",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DduCfnOsTQD/"
+   },
+   "steps": [
+    "Cover the pumpkin seeds with water and soak for at least 6 to 8 hours. Drain, rinse and pat dry on a clean kitchen towel.",
+    "Heat the oven to {{325F}}. Spread the seeds over a large tray and roast for 15 minutes, stirring halfway through. Cool for about 5 minutes.",
+    "Pulse the seeds a few times in a food processor to break them into a crumble, then run it continuously, scraping down the sides now and then. They go from crumble to a thick dry paste and then loosen into a smooth, runny butter in about 15-18 minutes.",
+    "Add the salt and blend again to mix it in; add more salt if you like. Store in an airtight jar or container.",
+    "Warm a tsp of oil and agave syrup in a small non-stick pan. Add the figs cut side down and cook undisturbed for about 3 minutes. Flip and cook 3 minutes more, then take off the heat.",
+    "Toast the bread, spread with pumpkin seed butter, top with the caramelized figs and finish with a pinch of salt and/or a drizzle of agave syrup."
+   ],
+   "time": null,
+   "title": "Pumpkin Seed Butter & Jammy Fig Toast",
+   "id": "ig-DduCfnOsTQD"
+  },
+  {
+   "categories": [
+    "Soups"
+   ],
+   "createdAt": 1793117999994,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Butternut-Kürbis",
+     "note": "mittelgroß, ca. 1–1,2 kg",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Möhren",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Birnen",
+     "note": null,
+     "q": 4,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Thymian",
+     "note": null,
+     "q": 2,
+     "q2": 3,
+     "u": "Zweige"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Rosmarin",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "Zweig"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "frischer Salbei",
+     "note": null,
+     "q": 6,
+     "q2": null,
+     "u": "Blätter"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Zimtstangen",
+     "note": null,
+     "q": 1,
+     "q2": 2,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Olivenöl",
+     "note": null,
+     "q": 6,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": null,
+     "name": "Sahne",
+     "note": null,
+     "q": 200,
+     "q2": null,
+     "u": "ml"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Gemüsebrühe",
+     "note": null,
+     "q": 600,
+     "q2": null,
+     "u": "ml"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Salz und Pfeffer",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "dairy",
+     "gpc": 100,
+     "group": null,
+     "name": "frisch geriebener Parmesan",
+     "note": "ca.",
+     "q": 100,
+     "q2": null,
+     "u": "g"
+    }
+   ],
+   "interpretations": [],
+   "lang": "de",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "fall"
+   ],
+   "servings": 4,
+   "servingsText": "Zutaten (4 Portionen)",
+   "source": {
+    "author": "@kitchenstories_official",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/Dd853x9oFZn/"
+   },
+   "steps": [
+    "Ofen auf {{200C}} vorheizen. Kürbis, Möhren und Birnen schälen, grob schneiden und mit den Kräutern, Zimtstangen und Olivenöl auf ein Blech geben. Ca. 30 Min. rösten, bis alles weich ist und Farbe bekommt.",
+    "Das Gemüse mit Sahne und Brühe fein pürieren und mit Salz und Pfeffer abschmecken.",
+    "Den Parmesan auf Backpapier geben und 10–15 Min. backen, bis er keine Blasen mehr wirft. Abkühlen lassen.",
+    "Die Suppe in Teller füllen und mit dem Parmesanchip garnieren."
+   ],
+   "time": null,
+   "title": "Kürbissuppe mit Birne und Parmesanchip",
+   "id": "ig-Dd853x9oFZn"
+  },
+  {
+   "categories": [
+    "Drinks"
+   ],
+   "createdAt": 1793117999993,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": null,
+     "name": "pflanzliche Milch",
+     "note": null,
+     "q": 200,
+     "q2": null,
+     "u": "ml"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "schwarzes Sesammus",
+     "note": "oder schwarzes Tahini",
+     "q": 1,
+     "q2": 2,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Ahornsirup oder Agavendicksaft",
+     "note": "optional, nach Geschmack",
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Vanille",
+     "note": "optional",
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "drinks",
+     "gpc": null,
+     "group": "Für den Dalgona Schaum",
+     "name": "Instantkaffee",
+     "note": null,
+     "q": 4,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Für den Dalgona Schaum",
+     "name": "Zucker",
+     "note": null,
+     "q": 4,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "other",
+     "gpc": null,
+     "group": "Für den Dalgona Schaum",
+     "name": "kochendes Wasser",
+     "note": null,
+     "q": 4,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "frozen",
+     "gpc": null,
+     "group": "Zum Servieren & Toppen",
+     "name": "Eiswürfel",
+     "note": "Einige, optional",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Zum Servieren & Toppen",
+     "name": "schwarzer Sesam",
+     "note": "Etwas, optional",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [],
+   "lang": "de",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": 1,
+   "servingsText": "Für 1-2 Personen",
+   "source": {
+    "author": "@koro_de",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DdRtYnDMp1t/"
+   },
+   "steps": [
+    "Schwarzes Sesammus mit Vanille, Ahornsirup und pflanzlicher Milch mixen, bis sich alles gleichmäßig aufgelöst hat. Je nach Geschmack mehr oder weniger Sesammus nehmen.",
+    "Für den Dalgona-Schaum Instantkaffee, Zucker und kochendes Wasser aufschlagen, bis die Mischung hell und fluffig ist.",
+    "Kalte Variante: Eiswürfel ins Glas geben, die schwarze Sesammilch dazugießen und mit dem Dalgona-Schaum toppen.",
+    "Warme Variante: Die Sesammilch erwärmen. Den Schaum in eine Tasse geben, eine kleine Mulde hineindrücken und die warme Milch vorsichtig hineingießen."
+   ],
+   "time": null,
+   "title": "Black Sesame Dalgona Latte",
+   "id": "ig-DdRtYnDMp1t"
+  },
+  {
+   "categories": [
+    "Desserts",
+    "Baking"
+   ],
+   "createdAt": 1793117999992,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Medjool Datteln",
+     "note": null,
+     "q": 250,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 85,
+     "group": null,
+     "name": "Kakao",
+     "note": null,
+     "q": 40,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Flohsamenschalen",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "other",
+     "gpc": null,
+     "group": null,
+     "name": "Wasser",
+     "note": null,
+     "q": 100,
+     "q2": null,
+     "u": "ml"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 240,
+     "group": null,
+     "name": "Tahini",
+     "note": null,
+     "q": 75,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 240,
+     "group": null,
+     "name": "schwarzes Sesammus",
+     "note": null,
+     "q": 75,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "dunkle Schokolade",
+     "note": null,
+     "q": 100,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Ursalz",
+     "note": "Prise",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "title",
+     "note": "The post has no title; named after its main ingredients"
+    }
+   ],
+   "lang": "de",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@healthy.shades (nach @diedeutschehausfrau)",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DZuiHG2Ikko/"
+   },
+   "steps": [
+    "Die Flohsamenschalen ca. 10 Min im Wasser quellen lassen, bis eine gelartige Masse entsteht.",
+    "Die Datteln entsteinen (ggf. 10 Min in heißem Wasser einweichen, wenn dein Mixer nicht stark genug ist) und mit den restlichen Zutaten zu einem homogenen Teig verarbeiten. In eine kleine, mit Backpapier ausgelegte Form geben.",
+    "Den Ofen auf {{170C}} Umluft vorheizen und die Brownies 30 Min backen.",
+    "Gut auskühlen lassen, mit der geschmolzenen Schokolade überziehen und mit etwas Steinsalz toppen."
+   ],
+   "time": null,
+   "title": "Schwarze Sesam-Brownies",
+   "id": "ig-DZuiHG2Ikko"
+  },
+  {
+   "categories": [
+    "Breakfast",
+    "Snacks"
+   ],
+   "createdAt": 1793117999991,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": 90,
+     "group": null,
+     "name": "rolled oats",
+     "note": "old-fashioned",
+     "q": 2,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 120,
+     "group": null,
+     "name": "chopped pecans",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 130,
+     "group": null,
+     "name": "pumpkin seeds",
+     "note": "pepitas",
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 85,
+     "group": null,
+     "name": "unsweetened shredded coconut",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 170,
+     "group": null,
+     "name": "chia seeds",
+     "note": "optional",
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "cinnamon",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "salt",
+     "note": "pinch",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "maple syrup",
+     "note": null,
+     "q": 0.3333333333333333,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "olive oil",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "vanilla extract",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "title",
+     "note": "Title taken from the post's first line"
+    }
+   ],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@soph.chelin",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DdACbsETE-z/"
+   },
+   "steps": [
+    "Line your air fryer basket with a parchment paper liner.",
+    "Add the oats, pecans, pumpkin seeds, coconut, chia, cinnamon and salt straight into the lined basket. Pour in the maple syrup, olive oil and vanilla and stir until everything is evenly coated.",
+    "Spread into an even layer and air fry at {{300F}} ({{150C}}) for 8–10 minutes, stirring once halfway, until golden and fragrant.",
+    "Let the granola cool completely in the basket before storing; it crisps up as it cools."
+   ],
+   "time": null,
+   "title": "Cinnamon Pecan Air Fryer Granola",
+   "id": "ig-DdACbsETE-z"
+  },
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1793117999990,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Pickled Red Onions",
+     "name": "red onion",
+     "note": "shaved or very thinly sliced",
+     "q": 0.5,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Pickled Red Onions",
+     "name": "apple cider vinegar",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "other",
+     "gpc": null,
+     "group": "Pickled Red Onions",
+     "name": "water",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Pickled Red Onions",
+     "name": "sweetener of choice",
+     "note": "granulated sugar, maple syrup, or honey",
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Pickled Red Onions",
+     "name": "sea salt",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Avocado Crema",
+     "name": "medium ripe avocado",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": "Avocado Crema",
+     "name": "sour cream",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Avocado Crema",
+     "name": "jalapeño",
+     "note": "seeds and ribs removed, minced",
+     "q": 0.5,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Avocado Crema",
+     "name": "fresh lime or lemon juice",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Avocado Crema",
+     "name": "sea salt",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "center-cut salmon",
+     "note": "skin-on",
+     "q": 1,
+     "q2": null,
+     "u": "lb"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "extra-virgin olive oil",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "brown sugar",
+     "note": "sub coconut sugar",
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "smoked paprika",
+     "note": null,
+     "q": 1.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "garlic powder",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "kosher salt",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "black pepper",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "lime",
+     "note": "cut into wedges",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "Shredded green cabbage or slaw mix",
+     "note": "for serving",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "Finely chopped fresh cilantro",
+     "note": "for serving",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "bakery",
+     "gpc": null,
+     "group": "Salmon Tacos",
+     "name": "corn or flour tortillas",
+     "note": "warmed",
+     "q": 8,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer"
+   ],
+   "servings": 4,
+   "servingsText": "Servings: 4 people",
+   "source": {
+    "author": "@dishingouthealth",
+    "recipeUrl": "https://dishingouthealth.com/salmon-tacos/",
+    "url": "https://www.instagram.com/reel/DdEbpqvPYle/"
+   },
+   "steps": [
+    "Pickled onions: put the red onion in a medium heat-proof bowl. Bring the vinegar, water, sweetener and sea salt to a boil in a medium saucepan, turn off the heat and pour over the onions. Let sit at room temperature for at least 30 minutes (or up to 2 hours). They keep in the fridge up to 3 days. Drain before using.",
+    "Avocado crema: mash the avocado with a fork until mostly smooth. Stir in the sour cream, jalapeño, lime or lemon juice and salt. Set aside.",
+    "Salmon: heat the oven broiler to HIGH with the rack 6 inches from the heat. Pat the salmon dry with a paper towel and set it skin side down in a baking dish or foil-lined rimmed sheet. Rub all over with the olive oil.",
+    "Mix the brown sugar, smoked paprika, garlic powder, salt and pepper and rub evenly into the flesh.",
+    "Broil to your liking, 8 to 10 minutes, then flake with a fork.",
+    "Assemble: spread 1 to 2 tbsp avocado crema on each warm tortilla and top with salmon, shredded cabbage or slaw (a spritz of lime juice or rice vinegar and a pinch of salt is nice on it), cilantro and pickled onions."
+   ],
+   "time": 40,
+   "title": "Salmon Tacos with Avocado Crema",
+   "id": "ig-DdEbpqvPYle"
+  },
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1793117999989,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": null,
+     "name": "chuck or blade roast",
+     "note": null,
+     "q": 3,
+     "q2": 4,
+     "u": "lb"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "grated apple",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "gojuchang",
+     "note": "if you're sensitive to spice, start off with less",
+     "q": 0.3333333333333333,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "medium onion",
+     "note": "diced",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "garlic",
+     "note": "minced",
+     "q": 4,
+     "q2": null,
+     "u": "cloves"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "ginger",
+     "note": "minced",
+     "q": 1,
+     "q2": null,
+     "u": "inch"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "honey",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "apple cider vinegar",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "beef broth",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "low sodium soy sauce",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "chopped kimchi",
+     "note": "optional but awesome",
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "time",
+     "note": "Prep 15 minutes + cook 4 hours, added up"
+    }
+   ],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@andyseastcoastkitchen_",
+    "recipeUrl": "https://theeastcoastkitchen.com/korean-braised-beef-slow-cooked-crowd-favorite/",
+    "url": "https://www.instagram.com/reel/DdEO4z5xQFv/"
+   },
+   "steps": [
+    "Heat the oven to {{325F}} ({{165C}}).",
+    "Put the chuck or blade roast in a large Dutch oven or heavy oven-safe pot.",
+    "Add the grated apple, gochujang, onion, garlic, ginger, honey, apple cider vinegar, beef broth, soy sauce and chopped kimchi (if using) right into the pot.",
+    "Turn the beef in the sauce until it's well coated on all sides.",
+    "Cover with a tight-fitting lid and cook in the oven for 4 hours, undisturbed, until very tender.",
+    "Take the pot out and shred the beef with two forks right in the pot, mixing it back into the liquid.",
+    "Serve in rice bowls, lettuce cups or burritos."
+   ],
+   "time": 255,
+   "title": "Korean Braised Beef",
+   "id": "ig-DdEO4z5xQFv"
+  },
+  {
+   "categories": [
+    "Sides"
+   ],
+   "createdAt": 1793117999988,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": "The method isn't in the post; the creator keeps it on her site.",
+   "ingredients": [
+    {
+     "aisle": "dairy",
+     "gpc": 227,
+     "group": "For the garlic herb butter",
+     "name": "unsalted butter",
+     "note": "114g",
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "For the garlic herb butter",
+     "name": "garlic",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "cloves"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "For the garlic herb butter",
+     "name": "chopped fresh parsley",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "For the garlic herb butter",
+     "name": "finely chopped fresh thyme leaves",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "For the garlic herb butter",
+     "name": "salt & pepper",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "For the Potato Stacks",
+     "name": "yellow or Yukon Gold potatoes",
+     "note": "sliced 1/16” thick",
+     "q": 3,
+     "q2": null,
+     "u": "lb"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "For the Potato Stacks",
+     "name": "small sprigs of fresh thyme",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "dairy",
+     "gpc": 100,
+     "group": "For the Potato Stacks",
+     "name": "grated parmesan cheese",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "For the Potato Stacks",
+     "name": "Neutral oil",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "For the Potato Stacks",
+     "name": "Flakey salt",
+     "note": "to finish",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@saltnpepperhere",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DezYw3FxobD/"
+   },
+   "steps": [],
+   "time": null,
+   "title": "Potato Stacks with Garlic Herb Butter",
+   "id": "ig-DezYw3FxobD"
+  },
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1793117999987,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": "The post lists ingredients without amounts and gives no temperature or times.",
+   "ingredients": [
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": null,
+     "name": "Salmon fillet",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": null,
+     "name": "Feta block",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Spinach",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Garlic",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Cherry tomatoes",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Chilli flakes",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Salt & pepper",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Oregano",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Pasta of choice",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "title",
+     "note": "The post has no title; named from its first line"
+    }
+   ],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@homewithmari__",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DbbiARnpvQu/"
+   },
+   "steps": [
+    "Air fry, then mix everything together until creamy."
+   ],
+   "time": null,
+   "title": "Air Fryer Salmon & Feta Pasta",
+   "id": "ig-DbbiARnpvQu"
+  },
+  {
+   "categories": [
+    "Drinks"
+   ],
+   "createdAt": 1793117999986,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": "The post lists the spices but doesn't say how to prepare it.",
+   "ingredients": [
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "canela en polvo",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "jengibre",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "sourceName": "🫚",
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "cardamomo",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "nuez moscada",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "clavos",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "pimienta negra",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "pinch"
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": null,
+     "name": "leche",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "emoji",
+     "note": "The post writes ginger as an emoji; shown here as jengibre (most likely ground ginger)."
+    },
+    {
+     "field": "title",
+     "note": "The post has no title"
+    }
+   ],
+   "lang": "es",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@andreaesquivelsalazar",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DYfd2JDx2nP/"
+   },
+   "steps": [],
+   "time": null,
+   "title": "Leche especiada",
+   "id": "ig-DYfd2JDx2nP"
+  },
+  {
+   "categories": [
+    "Salads",
+    "Mains"
+   ],
+   "createdAt": 1793117999980,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Chickpeas and edamame",
+     "name": "canned chickpeas",
+     "note": "drained and rinsed",
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "frozen",
+     "gpc": null,
+     "group": "Chickpeas and edamame",
+     "name": "edamame",
+     "note": "frozen or thawed",
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Chickpeas and edamame",
+     "name": "olive oil",
+     "note": "Drizzle",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Chickpeas and edamame",
+     "name": "onion powder",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Chickpeas and edamame",
+     "name": "garlic powder",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Chickpeas and edamame",
+     "name": "salt and pepper",
+     "note": "Pinch",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Potatoes",
+     "name": "medium sweet potatoes",
+     "note": "peeled and diced",
+     "q": 2,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "Potatoes",
+     "name": "olive oil",
+     "note": "Drizzle",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Potatoes",
+     "name": "salt and pepper",
+     "note": "Pinch",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Potatoes",
+     "name": "onion powder",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Potatoes",
+     "name": "smoked paprika",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Rocket",
+     "name": "rocket (arugula)",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Rocket",
+     "name": "lemon",
+     "note": "juiced",
+     "q": 0.5,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Other",
+     "name": "red onion",
+     "note": "sliced",
+     "q": 0.25,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Other",
+     "name": "pomegranate",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": "Other",
+     "name": "Hummus",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "Other",
+     "name": "avocado",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "Other",
+     "name": "Sesame seeds",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "title",
+     "note": "Named from the caption, which calls it a nourish bowl"
+    }
+   ],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": 2,
+   "servingsText": "Serves 2",
+   "source": {
+    "author": "@tessbegg",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DaCXmxLzqLN/"
+   },
+   "steps": [
+    "Heat the oven to {{200C}}. Put the sweet potato on a lined baking tray with the olive oil, salt, pepper, onion powder and paprika and toss to coat.",
+    "Put the chickpeas and edamame on another lined tray with oil, salt, pepper and the garlic and onion powder and toss to coat.",
+    "Bake both trays (potato on top) for 35 minutes.",
+    "Meanwhile, toss the rocket with the lemon juice in a bowl.",
+    "Spread hummus in the bottom of the bowls, then top with rocket, sweet potato, chickpeas, edamame, avocado, red onion, pomegranate and sesame seeds."
+   ],
+   "time": null,
+   "title": "Nourish Bowl",
+   "id": "ig-DaCXmxLzqLN"
+  },
+  {
+   "categories": [
+    "Snacks",
+    "Desserts"
+   ],
+   "createdAt": 1793117999979,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": 130,
+     "group": null,
+     "name": "pumpkin seeds",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 160,
+     "group": null,
+     "name": "hemp seeds",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 140,
+     "group": null,
+     "name": "sunflower seeds",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 145,
+     "group": null,
+     "name": "black sesame seeds",
+     "note": "or white",
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "almonds",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 150,
+     "group": null,
+     "name": "dried pitted dates",
+     "note": "soaked and excess liquid squeezed out",
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "goji berries",
+     "note": "or sub 3 tbsp chopped dried apricots",
+     "q": 3,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 85,
+     "group": null,
+     "name": "cacao powder",
+     "note": "+ 1 tbsp, plus extra for dusting",
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "large orange",
+     "note": "zest",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "large orange",
+     "note": "juice",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "salt",
+     "note": "small pinch",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [],
+   "lang": "en",
+   "notes": "Keeps up to 7 days in the fridge or up to 2 months in the freezer.",
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": 8,
+   "servingsText": "RECIPE (makes 8 balls)",
+   "source": {
+    "author": "@emilymaun_nutrition",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DZ4ovGLxqtb/"
+   },
+   "steps": [
+    "Soak the dates in hot water 5-10 min, drain well and squeeze out the water. Skip this if you're using soft Medjool dates.",
+    "Put the dates in a food processor with everything else, keeping back a little orange zest for garnish. Process until well combined and sticky.",
+    "With wet hands, shape into 8 balls.",
+    "Set them on a tray or plate, dust with cacao and press in a little orange zest.",
+    "Chill in the fridge for at least 30-60 min to firm up before serving."
+   ],
+   "time": null,
+   "title": "Chocolate Orange Bliss Balls",
+   "id": "ig-DZ4ovGLxqtb"
+  },
+  {
+   "categories": [
+    "Baking",
+    "Snacks"
+   ],
+   "createdAt": 1793117999978,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": 90,
+     "group": null,
+     "name": "sliced almonds",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 130,
+     "group": null,
+     "name": "pumpkin seeds",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 85,
+     "group": null,
+     "name": "unsweetened shredded coconut",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": null,
+     "name": "eggs",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "maple syrup or honey",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "vanilla extract",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "salt",
+     "note": "Pinch",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "Melted chocolate",
+     "note": "for dipping",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@thekelseyrose_",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DcwP-JXRhze/"
+   },
+   "steps": [
+    "Mix the almonds, pumpkin seeds, coconut, eggs, maple syrup, vanilla and salt in a large bowl until evenly combined.",
+    "Scoop onto a parchment-lined baking sheet and gently shape into cookies. Bake at {{325F}} for 12–15 minutes, until the edges are lightly golden. Let them cool completely so they firm up.",
+    "Dip the bottoms in melted chocolate, set them back on the parchment and let the chocolate set."
+   ],
+   "time": null,
+   "title": "Seed & Nut Cookies",
+   "id": "ig-DcwP-JXRhze"
+  },
+  {
+   "categories": [
+    "Baking",
+    "Desserts"
+   ],
+   "createdAt": 1793117999977,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": 250,
+     "group": null,
+     "name": "almond butter",
+     "note": "the runnier the better",
+     "q": 0.75,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "maple syrup",
+     "note": null,
+     "q": 0.3333333333333333,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": null,
+     "name": "eggs",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "vanilla extract",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 85,
+     "group": null,
+     "name": "unsweetened cocoa powder",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "espresso powder",
+     "note": "optional",
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "baking soda",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "salt",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": 125,
+     "group": null,
+     "name": "shredded zucchini",
+     "note": "from 1 small zucchini",
+     "q": 1,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 170,
+     "group": null,
+     "name": "chocolate chips of choice",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "cup"
+    }
+   ],
+   "interpretations": [
+    {
+     "allow": [
+      "tempF:350",
+      "in:8"
+     ],
+     "field": "temperature & pan",
+     "note": "The post says 350° and 8x8 without units; read as °F and inches (US recipe)"
+    }
+   ],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "summer"
+   ],
+   "servings": 16,
+   "servingsText": "Makes ~16 (depends on how you cut them)",
+   "source": {
+    "author": "@zmargotz",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DbGLUfCu-LG/"
+   },
+   "steps": [
+    "Heat the oven to {{350F}} and line an {{8in}} x {{8in}} baking dish with parchment paper.",
+    "Whisk the wet ingredients in a medium bowl until smooth.",
+    "Add the dry ingredients and whisk again; the batter will be thick. Fold in the zucchini and chocolate chips.",
+    "Pour into the dish and bake for 22-28 min. Start checking at 22: a toothpick should come out with just a few crumbles (hers took 28 min). Take them out earlier for extra fudgy; they keep baking after they come out.",
+    "Slice and serve."
+   ],
+   "time": null,
+   "title": "Zucchini Brownies",
+   "id": "ig-DbGLUfCu-LG"
+  },
+  {
+   "categories": [
+    "Baking",
+    "Breakfast"
+   ],
+   "createdAt": 1793117999976,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "semillas de chía",
+     "note": null,
+     "q": 80,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "semillas de lino",
+     "note": null,
+     "q": 80,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": 96,
+     "group": null,
+     "name": "harina de almendras",
+     "note": null,
+     "q": 70,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "other",
+     "gpc": null,
+     "group": null,
+     "name": "agua caliente",
+     "note": null,
+     "q": 80,
+     "q2": null,
+     "u": "ml"
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": null,
+     "name": "huevos",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "polvo de hornear",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "ajo en polvo",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "bicarbonato",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "sal",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    }
+   ],
+   "interpretations": [],
+   "lang": "es",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@ma_petite_bouchee",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/Db_NIXMgZYd/"
+   },
+   "steps": [
+    "Precalienta el horno a {{180C}}.",
+    "Pon las semillas de chía en el agua caliente y deja que se hidraten durante 10 minutos.",
+    "Añade las semillas de lino, la harina de almendras, los huevos, el polvo de hornear, el ajo en polvo, el bicarbonato y la sal, y tritúralo todo junto.",
+    "Pon la mezcla en un molde de {{20cm}} engrasado o forrado con papel de horno y extiéndela. Cocina 40 minutos en airfryer a {{180C}} o 50 minutos al horno a {{180C}}."
+   ],
+   "time": null,
+   "title": "Pan antiinflamatorio de semillas",
+   "id": "ig-Db_NIXMgZYd"
+  },
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1793117999975,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": null,
+     "name": "cod",
+     "note": null,
+     "q": 4,
+     "q2": 6,
+     "u": "pieces"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "oil",
+     "note": "any kind",
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "shallot",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "garlic",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "cloves"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "ginger",
+     "note": null,
+     "q": 6,
+     "q2": 8,
+     "u": "slices"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "red curry paste",
+     "note": null,
+     "q": 1,
+     "q2": 2,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "coconut milk",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "can"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "lime zest",
+     "note": null,
+     "q": 1.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "sugar",
+     "note": "optional",
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "salt",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "pepper",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "green onion",
+     "note": "for topping",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "cilantro",
+     "note": "for topping",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "chili oil",
+     "note": "for topping, optional",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "fresh lime",
+     "note": "for topping",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@passme.thesalt",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/Da32OHLgP5K/"
+   },
+   "steps": [
+    "If the cod is frozen, take the fillets out of their vacuum packs and put them in a large zip bag, pressing out as much air as you can. Weigh the bag down in a bowl of cold water for 15 minutes, then change the water and give it another 15 minutes. Gently squeeze the water out of the thawed fish, or press it with a paper towel.",
+    "Thinly slice the shallot, mince the garlic and slice the ginger (the peel can stay on; just wash it). Zest the lime.",
+    "Warm the oil in a pan over medium-low heat, add the shallot, garlic and ginger and sauté 3-5 minutes. Add the red curry paste (she used 1 tbsp for her toddler but prefers closer to 2 tbsp).",
+    "Once the paste is mixed in, add the coconut milk and stir. Add the lime zest, sugar, salt and pepper and bring to a simmer. Add the cod and spoon the sauce over it. Cover and cook for 12 minutes, still on medium-low.",
+    "Spoon more sauce over the fish and top with green onion, cilantro, chili oil and fresh lime."
+   ],
+   "time": 25,
+   "timeText": "Takes only 25 minutes to make",
+   "title": "Coconut Lime Poached Cod",
+   "id": "ig-Da32OHLgP5K"
+  },
+  {
+   "categories": [
+    "Mains"
+   ],
+   "createdAt": 1793117999974,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": "The post lists the ingredients but not how to cook it.",
+   "ingredients": [
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": null,
+     "name": "perniles de pollo",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "sourceName": "perniles de 🐤",
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Sal",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Paprika",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Orégano",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "Pimienta",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "tomates chonto",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "sourceName": "🍅 chonto",
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "cebolla",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "sourceName": "🧅",
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "dientes de ajo",
+     "note": null,
+     "q": 2,
+     "q2": null,
+     "sourceName": "🦷 de 🧄",
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "romero",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "ramita"
+    },
+    {
+     "aisle": "dairy",
+     "gpc": null,
+     "group": null,
+     "name": "kefir",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "perejil",
+     "note": "Un puñado",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "Ralladura de limón",
+     "note": null,
+     "q": null,
+     "q2": null,
+     "sourceName": "Ralladura de 🍋",
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "emoji",
+     "note": "The post writes chicken, tomato, onion, garlic cloves and lemon as emoji; shown here as words."
+    },
+    {
+     "field": "title",
+     "note": "The post has no title"
+    }
+   ],
+   "lang": "es",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": 2,
+   "servingsText": "PARA 2",
+   "source": {
+    "author": "@andreaesquivelsalazar",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/Dbth8-Zp0bp/"
+   },
+   "steps": [],
+   "time": null,
+   "title": "Perniles de pollo al kéfir",
+   "id": "ig-Dbth8-Zp0bp"
+  },
+  {
+   "categories": [
+    "Drinks"
+   ],
+   "createdAt": 1793117999973,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": "The post lists the ingredients but not how to make it.",
+   "ingredients": [
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "remolacha",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "manzana verde",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "sourceName": "🍏",
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "pera",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "sourceName": "🍐",
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "jengibre",
+     "note": "una patica",
+     "q": null,
+     "q2": null,
+     "sourceName": "🫚",
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "limón",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "other",
+     "gpc": null,
+     "group": null,
+     "name": "agüita",
+     "note": "al gusto",
+     "q": null,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "frozen",
+     "gpc": null,
+     "group": null,
+     "name": "hielos",
+     "note": "sus buenos",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [
+    {
+     "field": "emoji",
+     "note": "The post writes green apple, pear and ginger as emoji; shown here as manzana verde, pera and jengibre."
+    },
+    {
+     "field": "title",
+     "note": "The post has no title"
+    }
+   ],
+   "lang": "es",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@andreaesquivelsalazar",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DckCWoTRP8I/"
+   },
+   "steps": [],
+   "time": null,
+   "title": "Jugo de remolacha, manzana y pera",
+   "id": "ig-DckCWoTRP8I"
+  },
+  {
+   "categories": [
+    "Sides"
+   ],
+   "createdAt": 1793117999972,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": "The post lists the ingredients but not the method.",
+   "ingredients": [
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "espinacas",
+     "note": null,
+     "q": 200,
+     "q2": null,
+     "u": "g"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "sal",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "salsa de soja",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": null,
+     "name": "ajo picado",
+     "note": null,
+     "q": 0.5,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": null,
+     "name": "aceite de sésamo",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": null,
+     "name": "sésamo",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    }
+   ],
+   "interpretations": [],
+   "lang": "es",
+   "notes": "Keeps 3 to 4 days in the fridge; the creator likes it a little cold.",
+   "schema": 2,
+   "seasons": [
+    "spring",
+    "summer",
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@hamsikdang",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DZ75V0LoFnz/"
+   },
+   "steps": [],
+   "time": null,
+   "title": "Sigeumchi-muchim (시금치무침)",
+   "id": "ig-DZ75V0LoFnz"
+  },
+  {
+   "categories": [
+    "Mains",
+    "Soups"
+   ],
+   "createdAt": 1793117999971,
+   "favorite": false,
+   "importedBy": "claude",
+   "incomplete": null,
+   "ingredients": [
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "for the broth",
+     "name": "coconut milk",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "can"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "for the broth",
+     "name": "sesame oil",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "for the broth",
+     "name": "soy sauce",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "for the broth",
+     "name": "red curry paste",
+     "note": null,
+     "q": 3,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "for the broth",
+     "name": "beef broth",
+     "note": null,
+     "q": 0.25,
+     "q2": null,
+     "u": "cup"
+    },
+    {
+     "aisle": "meat",
+     "gpc": null,
+     "group": "for the beef",
+     "name": "ground beef",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "lb"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "for the beef",
+     "name": "small white onion",
+     "note": "diced",
+     "q": 1,
+     "q2": null,
+     "u": null
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "for the beef",
+     "name": "minced garlic",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "spices",
+     "gpc": null,
+     "group": "for the beef",
+     "name": "powdered ginger",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "for the beef",
+     "name": "soy sauce",
+     "note": null,
+     "q": 4,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "for the beef",
+     "name": "oyster sauce",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "for the beef",
+     "name": "honey",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "pantry",
+     "gpc": null,
+     "group": "for the beef",
+     "name": "cornstarch",
+     "note": null,
+     "q": 1,
+     "q2": null,
+     "u": "tbsp"
+    },
+    {
+     "aisle": "produce",
+     "gpc": null,
+     "group": "for the beef",
+     "name": "chopped spinach",
+     "note": "optional, handful",
+     "q": null,
+     "q2": null,
+     "u": null
+    }
+   ],
+   "interpretations": [],
+   "lang": "en",
+   "notes": null,
+   "schema": 2,
+   "seasons": [
+    "fall",
+    "winter"
+   ],
+   "servings": null,
+   "servingsText": null,
+   "source": {
+    "author": "@wholesome_hearty_eats",
+    "recipeUrl": null,
+    "url": "https://www.instagram.com/reel/DZsSZOwiiXo/"
+   },
+   "steps": [
+    "Broth: put all the broth ingredients in a pot and bring to a boil.",
+    "Beef: brown the beef with the garlic and onion. Mix the soy sauce, oyster sauce, honey and ginger and pour it over. Let it boil, then stir in a cornstarch slurry to thicken.",
+    "Serve with white rice, cucumber and green onions."
+   ],
+   "time": null,
+   "title": "Sticky Beef in a Coconut Red Curry Broth",
+   "id": "ig-DZsSZOwiiXo"
+  }
+ ]
+}

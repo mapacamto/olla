@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#EEE7D9">
+<meta name="description" content="Olla, taste collected. A personal recipe notebook.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Olla">
+<title>Olla</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Italiana&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nanum+Pen+Script&display=swap">
+<style>
+/* Layout: a handmade recipe book on grainy flecked paper. One column (max 720px), faint 32px rules, a fixed paper tab strip at the bottom.
+   Recipes are irregular hand-thrown plates (Carmen de Viboral motifs in earthy oxides + cobalt, japandi marks, peltre for soups)
+   with a loose cobalt or oxblood line drawing laid over them, slightly off-register like a two-ink print. Single light look by request. */
+:root {
+  color-scheme: light;
+  --paper: #EEE7D9;
+  --paper-2: #E5DCCB;
+  --rule: rgb(43 69 160 / 0.09);
+  --ink: #2A2622;
+  --muted: #7A7064;
+  --cobalt: #2B45A0;
+  --oxblood: #8E2F22;
+  --terracotta: #A8653A;
+  --olive: #6F6A3A;
+  --ochre: #B08A3A;
+  --linen: #D8CEBC;
+  --glaze: #F4EEE2;
+  --shadow: rgb(90 70 40 / 0.20);
+  --spring: #6F6A3A; --summer: #A8653A; --fall: #8E2F22; --winter: #2B45A0;
+  --hand: "Nothing You Could Do", "Bradley Hand", "Segoe Print", cursive;
+  --serif: "EB Garamond", Garamond, "Times New Roman", serif;
+  --pen: "Nanum Pen Script", "Bradley Hand", "Segoe Print", cursive;
+  --rh: 32px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; color: var(--ink); font-family: var(--serif); font-size: 17px; line-height: 1.55;
+  background-color: var(--paper);
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.35  0 0 0 0 0.28  0 0 0 0 0.2  0 0 0 0.55 0'/></filter><rect width='240' height='240' filter='url(%23n)' opacity='0.35'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='310' height='290'><g fill='%237a5a3a'><circle cx='23' cy='41' r='0.9' opacity='.5'/><circle cx='190' cy='22' r='0.7' opacity='.4'/><circle cx='120' cy='140' r='1.1' opacity='.35'/><circle cx='270' cy='200' r='0.8' opacity='.5'/><circle cx='60' cy='250' r='0.6' opacity='.45'/><circle cx='240' cy='90' r='1' opacity='.3'/><path d='M150 60c3 1 5 3 6 6' stroke='%237a5a3a' stroke-width='.5' fill='none' opacity='.4'/><path d='M40 160c2-2 5-2 7 0' stroke='%237a5a3a' stroke-width='.5' fill='none' opacity='.35'/></g></svg>");
+  padding-left: max(0px, env(safe-area-inset-left, 0px));
+  padding-right: max(0px, env(safe-area-inset-right, 0px));
+  padding-block: 0 calc(78px + env(safe-area-inset-bottom, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 1.5px dashed var(--cobalt); outline-offset: 3px; }
+
+.page {
+  max-width: 720px; margin: 0 auto; min-height: 100vh;
+  padding-left: max(18px, env(safe-area-inset-left, 0px));
+  padding-right: max(18px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+/* ruled writing lines live only where there is writing; text sits on them */
+/* inline bits (small units, italic notes, converted temps) must never make a row taller than one line */
+.ruled small, .ruled i, .ruled .conv, .ruled .from, .ruled .q, .ruled b { line-height: 1; }
+.ruled > li { line-height: var(--rh); }
+.ruled { --line: rgb(43 69 160 / 0.16); line-height: var(--rh);
+  background: repeating-linear-gradient(to bottom, transparent 0 calc(var(--rh) - 1px), var(--line) calc(var(--rh) - 1px) var(--rh)) 0 -3px; }
+.caps { font-family: var(--serif); font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; font-weight: 500; color: var(--muted); }
+.ital { font-family: var(--serif); font-style: italic; color: var(--muted); }
+
+/* header */
+.head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 22px; }
+.mark { display: flex; align-items: center; gap: 10px; color: var(--cobalt); text-decoration: none; }
+.mark svg { width: 148px; height: 60.5px; flex: none; display: block; }
+.mark b { font-family: "Italiana", var(--serif); font-weight: 400; font-size: 32px; line-height: 1; letter-spacing: 0.16em; }
+.tagline { margin: 6px 0 0; font-family: var(--serif); font-style: italic; color: var(--terracotta); }
+.head-r { display: flex; align-items: center; gap: 10px; }
+.units { display: inline-flex; gap: 4px; align-items: center; white-space: nowrap; }
+.units button { border: 0; background: none; padding: 2px 6px; font-family: var(--serif); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+.units button[aria-pressed="true"] { color: var(--ink); border-radius: 48% 52% 45% 55% / 60% 40% 60% 40%; box-shadow: 0 0 0 1.2px var(--ink); }
+.gear { border: 0; background: none; width: 34px; height: 34px; padding: 4px; color: var(--ink); }
+.sub { margin: 6px 0 0; }
+
+.search { width: 100%; border: 0; border-bottom: 1.2px solid var(--ink); background: transparent; padding: 6px 2px; margin-top: 26px; font-family: var(--serif); font-size: 18px; font-style: italic; }
+.search::placeholder { color: var(--muted); }
+.search:focus { outline: none; border-bottom-color: var(--cobalt); }
+
+.filters { display: flex; align-items: flex-end; gap: 14px; margin-top: 20px; }
+.pick { flex: 1 1 0; min-width: 0; display: grid; gap: 3px; position: relative; }
+.pick .caps { font-size: 10.5px; letter-spacing: 0.24em; }
+.pick select { appearance: none; -webkit-appearance: none; width: 100%; min-width: 0; border: 0; border-bottom: 1px solid var(--rule, rgba(40,30,20,.35)); border-radius: 0; background: transparent;
+  font-family: var(--serif); font-size: 17px; color: var(--ink); padding: 5px 22px 6px 1px; cursor: pointer; text-overflow: ellipsis; }
+.pick::after { content: ""; position: absolute; right: 5px; bottom: 15px; width: 6px; height: 6px; border-right: 1.2px solid var(--ink); border-bottom: 1.2px solid var(--ink); transform: rotate(45deg); pointer-events: none; }
+.pick select:focus-visible { outline: none; border-bottom-color: var(--cobalt); }
+.pick.on select { color: var(--cobalt); border-bottom-color: var(--cobalt); }
+.pick.on::after { border-color: var(--cobalt); }
+.filters .clear { flex: none; padding-bottom: 8px; font-size: 15px; }
+.chip { border: 0; background: none; font-family: var(--serif); font-size: 17px; padding: 3px 7px; color: var(--ink); position: relative; }
+.chip[aria-pressed="true"]::after { content: ""; position: absolute; inset: -1px -4px; border: 1.3px solid var(--cobalt); border-radius: 55% 45% 60% 40% / 60% 50% 45% 50%; transform: rotate(-3deg); }
+
+/* plates grid */
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 16px; margin-top: 30px; }
+@media (min-width: 620px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.tile { border: 0; background: none; padding: 0; text-align: left; display: grid; gap: 6px; min-width: 0; color: inherit; }
+.dish { position: relative; display: block; width: 100%; aspect-ratio: 1; max-width: 100%; }
+.dish > svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.dish .plate { filter: drop-shadow(0 7px 7px var(--shadow)); }
+.dish .doodle { pointer-events: none; }
+.tile .fav { position: absolute; right: 0; top: 0; width: 26px; height: 26px; color: var(--oxblood); }
+.tile h3 { margin: 4px 0 0; font-family: var(--hand); font-weight: 400; font-size: 20px; line-height: 1.3; text-wrap: balance; overflow-wrap: anywhere; }
+.tile .meta { font-size: 14px; }
+.tag-mini { font-family: var(--serif); font-style: normal; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--oxblood); }
+@media (prefers-reduced-motion: no-preference) {
+  .tile .plate { transition: transform .35s ease; transform-origin: 50% 50%; }
+  .tile:hover .plate { transform: rotate(-7deg); }
+}
+
+.empty { margin-top: 34px; max-width: 36ch; }
+.empty h2 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 24px; margin: 0 0 4px; }
+.empty p { margin: 0; }
+.note-line { margin-top: 18px; font-size: 15px; display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+.link { border: 0; background: none; padding: 0; color: var(--oxblood); font-family: var(--serif); font-size: 15px; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+.btn { border: 1.3px solid var(--ink); background: transparent; padding: 7px 16px; font-family: var(--serif); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px; display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+.btn.solid { background: var(--ink); color: var(--paper); }
+.btn:disabled { opacity: .45; cursor: default; }
+svg.i { width: 18px; height: 18px; flex: none; }
+
+/* recipe page */
+.rbar { display: flex; justify-content: space-between; align-items: center; height: 58px; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: linear-gradient(var(--paper) 78%, rgb(238 231 217 / 0)); }
+.back { border: 0; background: none; padding: 0; display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+.back svg { width: 34px; height: 18px; }
+.heart { border: 0; background: none; width: 38px; height: 38px; padding: 5px; color: var(--oxblood); }
+.hero { display: grid; gap: 4px; }
+.hero .dish { width: min(78%, 330px); margin: 6px auto 4px; }
+.hero h1 { margin: 0; font-family: var(--hand); font-weight: 400; font-size: clamp(31px, 8.2vw, 44px); line-height: 1.15; text-wrap: balance; overflow-wrap: anywhere; }
+.byline { font-style: italic; color: var(--muted); font-size: 16px; display: flex; flex-wrap: wrap; gap: 0 8px; }
+.byline .dot { opacity: .6; }
+.tags { display: flex; gap: 2px 12px; flex-wrap: wrap; font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--muted); }
+.tags .s { color: var(--season); }
+.loops { height: 16px; margin: 18px 0 6px; background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='16'><path d='M0 11c5 0 7-2 8-5 1-3-1-5-3-4-3 1-2 6 2 8 4 2 9 1 15 1' fill='none' stroke='%232B45A0' stroke-width='1.3' stroke-linecap='round'/></svg>") repeat-x left center; opacity: .85; }
+.loops.red { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='16'><path d='M0 11c5 0 7-2 8-5 1-3-1-5-3-4-3 1-2 6 2 8 4 2 9 1 15 1' fill='none' stroke='%238E2F22' stroke-width='1.3' stroke-linecap='round'/></svg>"); }
+
+.controls { display: flex; align-items: center; justify-content: space-between; gap: 12px 16px; flex-wrap: wrap; margin-top: 6px; }
+.ctl-right { display: inline-flex; align-items: center; gap: 16px; }
+.stepper .caps { margin-right: 4px; }
+.lang-pick { position: relative; }
+.lang-pick select { appearance: none; -webkit-appearance: none; border: 0; border-bottom: 1px solid rgba(40,30,20,.35); border-radius: 0; background: transparent; font-family: var(--serif); font-size: 15px; color: var(--ink); padding: 3px 18px 3px 1px; cursor: pointer; }
+.lang-pick::after { content: ""; position: absolute; right: 4px; top: 9px; width: 5px; height: 5px; border-right: 1.1px solid var(--ink); border-bottom: 1.1px solid var(--ink); transform: rotate(45deg); pointer-events: none; }
+.lang-pick select:focus-visible { outline: none; border-bottom-color: var(--cobalt); }
+.stepper { display: inline-flex; align-items: center; gap: 6px; }
+.step-btn { border: 1.1px solid var(--ink); background: none; width: 26px; height: 26px; border-radius: 52% 48% 55% 45% / 48% 55% 45% 52%; display: grid; place-items: center; padding: 0; color: var(--ink); }
+.step-btn:disabled { opacity: .3; }
+.stepper output { font-family: var(--serif); font-size: 20px; min-width: 2.6ch; text-align: center; color: var(--oxblood); }
+.langs { display: inline-flex; gap: 2px 10px; flex-wrap: wrap; }
+.langs button { border: 0; background: none; padding: 2px 6px; font-family: var(--serif); font-size: 16px; color: var(--muted); position: relative; }
+.langs button[aria-pressed="true"] { color: var(--ink); }
+.langs button[aria-pressed="true"]::after { content: ""; position: absolute; left: 2px; right: 2px; bottom: -1px; height: 6px; background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 6' preserveAspectRatio='none'><path d='M1 4c12-3 25-1 38-2 8 0 14 1 20 0' fill='none' stroke='%232B45A0' stroke-width='1.6' stroke-linecap='round'/></svg>") no-repeat center / 100% 100%; }
+.langs .tr { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--muted); }
+.status { font-size: 13px; font-style: italic; color: var(--muted); margin: 6px 0 0; }
+.status:empty { display: none; }
+.status.err { color: var(--oxblood); }
+
+.sec { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-top: 34px; flex-wrap: wrap; }
+.sec h2 { margin: 0; font-family: var(--serif); font-weight: 500; font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase; }
+.ings { list-style: none; margin: 10px 0 0; padding: 0; }
+.ings li { display: grid; grid-template-columns: 6.8rem minmax(0, 1fr); gap: 0 14px; padding: 0; }
+.ings .amt { color: var(--oxblood); text-align: right; font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ings .amt small { font-size: 14px; font-style: italic; }
+.ings .nm { overflow-wrap: anywhere; min-width: 0; }
+.ings .nm i { color: var(--muted); }
+.ings .grp { display: block; font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--cobalt); padding-top: var(--rh); }
+.ings .grp:first-child { padding-top: 0; }
+.steps { list-style: none; margin: 10px 0 0; padding: 0; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 8px; max-width: 64ch; }
+.steps li::before { content: counter(s); font-family: var(--serif); font-size: 19px; color: var(--cobalt); line-height: var(--rh); }
+.conv { color: var(--oxblood); white-space: nowrap; }
+.nota { font-family: var(--pen); color: var(--cobalt); font-size: 23px; line-height: 1.2; margin: 26px 0 0; max-width: none; transform: rotate(-0.6deg); transform-origin: left; }
+.nota::before { content: "nota — "; color: var(--oxblood); }
+.flag { margin-top: 18px; border-left: 2px solid var(--oxblood); padding: 2px 0 2px 12px; font-size: 15px; }
+.flag b { display: block; font-family: var(--serif); font-weight: 500; font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--oxblood); }
+.flag.c { border-color: var(--cobalt); } .flag.c b { color: var(--cobalt); }
+.flag ul { margin: 2px 0 0; padding-left: 18px; }
+.source { margin-top: 30px; padding-top: 12px; border-top: 1px solid rgb(42 38 34 / 0.18); font-size: 15px; display: grid; gap: 2px; }
+.source a { color: var(--cobalt); overflow-wrap: anywhere; }
+.danger { margin-top: 34px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; font-size: 15px; color: var(--muted); }
+
+/* shopping */
+.shop-add { display: flex; gap: 10px; align-items: flex-end; margin-top: 22px; }
+.shop-add input { flex: 1; min-width: 0; border: 0; border-bottom: 1.2px solid var(--ink); background: transparent; padding: 6px 2px; font-family: var(--serif); font-size: 18px; }
+.shop-add input:focus { outline: none; border-bottom-color: var(--cobalt); }
+.aisle-h { margin-top: 26px; display: flex; justify-content: space-between; align-items: baseline; }
+.items { list-style: none; margin: 4px 0 0; padding: 0; }
+.item { width: 100%; border: 0; background: none; padding: 0; text-align: left; display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; gap: 0 10px; align-items: start; color: inherit; line-height: var(--rh); }
+.tick { width: 18px; height: 18px; margin-top: 6px; border: 1.3px solid var(--ink); border-radius: 4px 6px 3px 7px; position: relative; }
+.tick svg { position: absolute; left: -3px; top: -9px; width: 28px; height: 28px; color: var(--cobalt); }
+.item .nm { font-family: var(--serif); font-size: 17px; overflow-wrap: anywhere; }
+.item .from { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--muted); margin-left: 8px; }
+.item .q { color: var(--oxblood); white-space: nowrap; font-size: 15px; }
+.item[aria-checked="true"] .nm, .item[aria-checked="true"] .q { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--cobalt); text-decoration-thickness: 1.6px; }
+
+/* sheet */
+.scrim { position: fixed; inset: 0; background: rgb(42 38 34 / 0.35); z-index: 20; display: flex; align-items: flex-end; justify-content: center; }
+.sheet { width: 100%; max-width: 720px; max-height: 88vh; overflow-y: auto; border-radius: 4px 4px 0 0; background: var(--paper); box-shadow: 0 -8px 24px var(--shadow);
+  padding: 22px max(18px, env(safe-area-inset-right, 0px)) calc(22px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px)); display: grid; gap: 14px; }
+.sheet h2 { margin: 0; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 24px; }
+.sheet p { margin: 0; }
+.field { display: grid; gap: 4px; }
+.field input, .field textarea { border: 0; border-bottom: 1.2px solid var(--ink); background: transparent; padding: 6px 2px; font-family: var(--serif); font-size: 16px; }
+.field textarea { min-height: 150px; resize: vertical; border: 1.2px solid rgb(42 38 34 / 0.5); border-radius: 3px; padding: 8px; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--cobalt); }
+.checklist { list-style: none; margin: 0; padding: 0; }
+.checklist label { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 0 10px; line-height: var(--rh); }
+.checklist input { width: 17px; height: 17px; margin-top: 7px; accent-color: var(--ink); }
+.checklist b { font-family: var(--serif); font-weight: 500; font-size: 17px; }
+.checklist .q { color: var(--oxblood); margin-left: 6px; font-size: 15px; }
+.row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.toggle { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid rgb(42 38 34 / 0.1); flex-wrap: wrap; }
+.switch { width: 46px; height: 26px; border-radius: 20px; border: 1.3px solid var(--ink); background: transparent; position: relative; padding: 0; flex: none; }
+.switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--muted); transition: left .2s; }
+.switch[aria-checked="true"] { background: var(--ink); }
+.switch[aria-checked="true"]::after { left: 23px; background: var(--paper); }
+
+/* tabs */
+.tabs { position: fixed; left: 0; right: 0; bottom: 0; z-index: 15; background: var(--paper-2);
+  padding: 6px max(16px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.tabs::before { content: ""; position: absolute; left: 0; right: 0; top: -3px; height: 6px; background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 6' preserveAspectRatio='none'><path d='M0 3c40-2 80 1 130 0s90-2 140 0 90 1 130-1' fill='none' stroke='%232A2622' stroke-width='1.2'/></svg>") no-repeat center / 100% 100%; }
+.tabs .in { max-width: 720px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+.tab { border: 0; background: none; color: var(--muted); padding: 4px 0; display: grid; justify-items: center; gap: 1px; font-family: var(--serif); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; position: relative; }
+.tab svg { width: 26px; height: 26px; }
+.tab[aria-current="page"] { color: var(--ink); }
+.tab .badge { position: absolute; top: 0; left: calc(50% + 8px); background: var(--oxblood); color: var(--paper); font-size: 10px; letter-spacing: 0; border-radius: 48% 52% 50% 50%; min-width: 18px; height: 18px; line-height: 18px; text-align: center; }
+.toast { position: fixed; left: 50%; transform: translateX(-50%) rotate(-1deg); bottom: calc(84px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--paper); padding: 7px 16px; font-family: var(--serif); font-size: 18px; z-index: 30; max-width: calc(100% - 32px); border-radius: 3px; }
+@media (prefers-reduced-motion: no-preference) { .sheet { animation: up .22s ease-out; } @keyframes up { from { transform: translateY(24px); } } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="olla-soft" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="1" seed="2"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter>
+  <filter id="olla-rough" x="-6%" y="-6%" width="112%" height="112%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="4.5"/></filter>
+  <filter id="olla-crayon" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="t"/><feColorMatrix in="t" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.7" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in" result="g"/><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="1" seed="9" result="w"/><feDisplacementMap in="g" in2="w" scale="2.5"/></filter>
+  <filter id="olla-grain" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="8" result="t"/><feColorMatrix in="t" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.45" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in"/></filter>
+  <filter id="olla-line" x="-6%" y="-6%" width="112%" height="112%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="5"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter>
+  <filter id="olla-logo" x="-6%" y="-6%" width="112%" height="112%"><feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="1" seed="5"/><feDisplacementMap in="SourceGraphic" scale="1.2"/></filter>
+</defs></svg>
+<main class="page" id="app"></main>
+<nav class="tabs" aria-label="Sections"><div class="in" id="tabs"></div></nav>
+<div id="layer"></div>
+
+<script>
+(() => {
+"use strict";
+
+// ---------- hand-drawn icons ----------
+const sv = (d, w = 1.6) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+const I = {
+  book: sv('<path d="M4.4 5.4c3-1 5.6-.5 7.6 1.1 2.1-1.7 4.6-2 7.6-1v13.4c-3-.8-5.5-.5-7.6 1.1-2-1.6-4.6-2-7.6-1.1z"/><path d="M12 6.6c.1 4.5-.1 8.8.1 13.3"/>'),
+  heart: sv('<path d="M12.2 19.8c-4-2.5-7.7-6-7.4-9.9.2-2.5 2.2-4.2 4.3-4 1.4.1 2.5 1 3.1 2.3.6-1.3 1.8-2.4 3.3-2.4 2.4 0 4.1 2 3.8 4.6-.4 3.7-3.6 6.8-7.1 9.4z"/>'),
+  heartFill: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"><path d="M12.2 19.8c-4-2.5-7.7-6-7.4-9.9.2-2.5 2.2-4.2 4.3-4 1.4.1 2.5 1 3.1 2.3.6-1.3 1.8-2.4 3.3-2.4 2.4 0 4.1 2 3.8 4.6-.4 3.7-3.6 6.8-7.1 9.4z"/></svg>',
+  basket: sv('<path d="M3.6 10.4c5.7-.3 11.2-.2 16.8.1l-1.9 8.7c-4.2.3-8.5.3-12.9 0z"/><path d="M8.2 10.1 10.6 4.6M15.9 10.2 13.5 4.7"/><path d="M8.7 13.4l.4 3M12.1 13.5v3M15.4 13.4l-.4 3"/>'),
+  pen: sv('<path d="M15.6 4.4l4 4L9.2 18.9l-5.1 1.1 1-5.1z"/><path d="M13.6 6.5l4 4"/>'),
+  gear: sv('<circle cx="12" cy="12" r="3.1"/><path d="M12 3.4v2.4M12 18.2v2.4M3.4 12h2.4M18.2 12h2.4M5.9 5.9l1.7 1.7M16.4 16.4l1.7 1.7M5.9 18.1l1.7-1.7M16.4 7.6l1.7-1.7"/>', 1.4),
+  plus: '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5.4c.1 4.4 0 8.8.1 13.2M5.5 12.3c4.3-.2 8.7 0 13-.1"/></svg>',
+  minus: '<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5.5 12.3c4.3-.2 8.7 0 13-.1"/></svg>',
+  back: '<svg viewBox="0 0 40 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M37 10.5c-9-.6-21 .2-31-.3M10.5 4.5 4.7 10.3l6.1 5.4"/></svg>',
+  tick: '<svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15.5c2 1.5 3.5 3.5 4.5 5.5 3-7 8-13 14-17.5"/></svg>',
+};
+// I1 logo: the hand-thrown olla seen from above (soup, handles at 45/225 deg, spoon) + hand-drawn OLLA.
+// The viewBox starts at the drawing's leftmost ink (x = 17.4) so the mark sits flush with the page margin.
+const WORDMARK = `<svg viewBox="17.4 0 244.6 100" preserveAspectRatio="xMinYMid meet" aria-hidden="true">
+  <path filter="url(#olla-grain)" fill="#B4693A" opacity=".9" d="M92.4 49C92.4 66 79 76.5 62.5 76.5S31.8 66 31.8 49 46 22.2 62.5 22.2 92.4 32 92.4 49Z"/>
+  <g style="mix-blend-mode:multiply" fill="none" stroke="#2B45A0" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#olla-logo)">
+  <path d="M98.1 50C98.3 69 83 84 60 84.1 39.5 84.2 23 69.5 23 50 22.8 30 38.5 15.8 60 15.9 81 16 97.8 31 98.1 50Z"/>
+  <path transform="rotate(-45 60 50)" d="M24 42c-9-3-17 0-17 8 0 9 8 12 17 9M96 42c9-3 17 0 17 8 0 9-8 12-17 9"/>
+  <g stroke-width="3"><ellipse cx="53" cy="57" rx="9" ry="6.2" transform="rotate(-135 53 57)"/><path d="M46.6 50.6 L21.2 25.2"/></g>
+  <path d="M112 22c1 13 0 28 .5 41 .3 8 .2 15 0 22 9 .6 19 0 29-1.2 M156 23c.6 14-.4 29 .4 43 .3 7 0 13-.2 19 9 .4 18-.4 28-1 M197 86c4-12 9-27 13-40 3-9 6-17 9-24 4 12 8 27 13 41 3 8 5 15 8 22 M206 64c8 .6 16 .3 25-.9 M252 83.5l.6.4"/></g></svg>`;
+
+// ---------- tableware ----------
+// Rule: soups come in a peltre bowl. Everything else is an irregular hand-thrown plate:
+// ~40% Carmen de Viboral motifs, ~30% japandi brush marks, ~15% stoneware twist, ~15% speckle with an embossed sprig.
+// Inks are earthy oxides plus cobalt (about one plate in five).
+function rng(str) { let h = 2166136261; for (const c of String(str)) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } const f = () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 10000) / 10000; }; for (let i = 0; i < 7; i++) f(); return f; }
+const P = n => (+n).toFixed(1);
+const pick = (R, a) => a[Math.floor(R() * a.length)];
+// While WARP holds a plate's shape, every placement follows that plate's own outline instead of a perfect circle.
+let WARP = null;
+const polar = (r, deg) => { const t = deg * Math.PI / 180; if (WARP) { const m = r * WARP.f(t); return [100 + m * Math.cos(t) * WARP.sx, 100 + m * Math.sin(t) * WARP.sy]; } return [100 + r * Math.cos(t), 100 + r * Math.sin(t)]; };
+const ring = r => { let d = ""; for (let i = 0; i <= 72; i++) { const [x, y] = polar(r, i * 5); d += (i ? "L" : "M") + P(x) + " " + P(y); } return d + "Z"; };
+const G = (x, y, a, inner) => `<g transform="translate(${P(x)} ${P(y)}) rotate(${P(a)})">${inner}</g>`;
+const brush = (len, w) => `<path d="M0 0C${P(len * .25)} ${P(-w)} ${P(len * .65)} ${P(-w * .7)} ${P(len)} 0C${P(len * .6)} ${P(w * .25)} ${P(len * .25)} ${P(w * .55)} 0 0Z"/>`;
+const fan = (size, R) => [-2, -1, 0, 1, 2].map(i => G(0, 0, i * 19 + (R() - .5) * 8, brush(size * (1 - Math.abs(i) * .1), size * .2))).join("");
+const quad = (p0, p1, p2, t) => [(1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * p1[0] + t * t * p2[0], (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * p1[1] + t * t * p2[1]];
+const quadAng = (p0, p1, p2, t) => { const dx = 2 * (1 - t) * (p1[0] - p0[0]) + 2 * t * (p2[0] - p1[0]), dy = 2 * (1 - t) * (p1[1] - p0[1]) + 2 * t * (p2[1] - p1[1]); return Math.atan2(dy, dx) * 180 / Math.PI; };
+function arcs(n, off, r, rc, col, w) { let s = ""; for (let k = 0; k < n; k++) { const t = off + k * 360 / n, u = t + 360 / n, [x1, y1] = polar(r, t), [x2, y2] = polar(r, u), [cx, cy] = polar(rc, t + 180 / n); s += `<path d="M${P(x1)} ${P(y1)}Q${P(cx)} ${P(cy)} ${P(x2)} ${P(y2)}" fill="none" stroke="${col}" stroke-width="${w}"/>`; } return s; }
+// a hand-thrown outline: the radius wobbles with a few slow waves
+function shape(R, amp) {
+  const waves = [1, 2, 3].map(k => ({ k: k + 1, a: amp * (0.5 + R()) / k, p: R() * 6.28 }));
+  const sx = 1 + (R() - .5) * .09, sy = 1 + (R() - .5) * .09;
+  const f = t => 1 + waves.reduce((acc, w) => acc + w.a * Math.sin(w.k * t + w.p), 0);
+  const path = r => { let d = ""; for (let i = 0; i <= 72; i++) { const t = i / 72 * Math.PI * 2, rr = r * f(t); d += (i ? "L" : "M") + P(100 + rr * Math.cos(t) * sx) + " " + P(100 + rr * Math.sin(t) * sy); } return d + "Z"; };
+  return { f, sx, sy, path };
+}
+function wobble(R, r, amp) { return shape(R, amp).path(r); }
+const INK = { iron: "#2A2622", terracotta: "#9C5530", olive: "#5F5B2E", ochre: "#A37A2A", oxblood: "#8E2F22", cobalt: "#2B45A0" };
+const pickInk = R => { const x = R(); return x < .3 ? INK.iron : x < .48 ? INK.terracotta : x < .62 ? INK.olive : x < .72 ? INK.ochre : x < .82 ? INK.oxblood : INK.cobalt; };
+const GLAZES = ["#F4EEE2", "#F1E9DA", "#EEE7DB", "#F6F1E7", "#E9E2D4"];
+function speckle(R, n, r, col) { let s = ""; for (let i = 0; i < n; i++) { const [x, y] = polar(Math.sqrt(R()) * r, R() * 360); s += `<circle cx="${P(x)}" cy="${P(y)}" r="${P(.35 + R() * .9)}" fill="${col}" opacity="${(.25 + R() * .55).toFixed(2)}"/>`; } return s; }
+
+function carmen(R, col) {
+  const border = Math.floor(R() * 5), center = Math.floor(R() * 4.7), off = R() * 360;
+  let s = "", p = "";
+  if (border === 0) { const n = 9 + Math.floor(R() * 3); for (let k = 0; k < n; k++) { const t = off + k * 360 / n, [x, y] = polar(68, t); p += G(x, y, t, fan(15, R)); } s += arcs(n, off, 68, 61, col, 1.3); }
+  else if (border === 1) { const n = 13; for (let k = 0; k < n; k++) { const t = off + k * 360 / n, [x, y] = polar(74, t), [dx, dy] = polar(74, t + 180 / n); p += G(x, y, t, G(0, 0, -40, brush(8.5, 4.2)) + brush(9.5, 4.4) + G(0, 0, 40, brush(8.5, 4.2))) + `<circle cx="${P(dx)}" cy="${P(dy)}" r="1.6"/>`; } s += arcs(n, off, 72, 65, col, 1.3); }
+  else if (border === 2) { wobble(R, 78, .012); s += `<path d="${ring(72)}" fill="none" stroke="${col}" stroke-width="1"/>`; const m = 34; for (let i = 0; i < m; i++) { const t = off + i * 360 / m, [x, y] = polar(72, t), side = i % 2 ? 1 : -1; p += G(x, y, t + 90 + side * 42, brush(13 + R() * 3, 4.4)); } }
+  else if (border === 3) { const n = 17; for (let k = 0; k < n; k++) { const t = off + k * 360 / n, [x, y] = polar(74, t), [dx, dy] = polar(65, t + 180 / n); s += G(x, y, t + 90, `<path d="M-6 4C-5 -5 4 -7 7 -1" fill="none" stroke="${col}" stroke-width="3.3" stroke-linecap="round"/>`); p += `<circle cx="${P(dx)}" cy="${P(dy)}" r="1.5"/>`; } }
+  else { const n = 8; for (let k = 0; k < n; k++) { const t = off + k * 360 / n, [x, y] = polar(72, t); if (k % 2) p += G(x, y, t + 90, `<circle cx="-3.6" cy="2.4" r="3.3"/><circle cx="3.6" cy="2.4" r="3.3"/><circle cx="0" cy="-3.6" r="3.3"/>`); else { s += G(x, y, t + 90, `<path d="M-9 4C-4 -8 8 -6 7 1C6 6 0 5 1 1" fill="none" stroke="${col}" stroke-width="1.7" stroke-linecap="round"/>`); p += G(x, y, t + 180, G(0, 0, -30, brush(12, 4)) + G(0, 0, 30, brush(12, 4))); } } }
+  if (center === 0) { const m = R() < .5 ? 1 : -1, p0 = [100 - 24 * m, 128], p1 = [100 + 18 * m, 114], p2 = [100 + 16 * m, 72];
+    s += `<path d="M${p0}Q${p1} ${p2}" fill="none" stroke="${col}" stroke-width="1.4"/>`;
+    for (let i = 0; i < 7; i++) { const t = .12 + i * .1, [x, y] = quad(p0, p1, p2, t), a = quadAng(p0, p1, p2, t); p += G(x, y, a + (i % 2 ? 48 : -48), brush(18 - i, 4.6)); }
+    p += G(p2[0], p2[1], quadAng(p0, p1, p2, 1), fan(19, R)); }
+  else if (center === 1) { s += `<path d="M100 132Q94 114 100 90" fill="none" stroke="${col}" stroke-width="1.6"/>`; p += G(100, 92, -90, brush(20, 6.5)) + G(98, 94, -118, brush(18, 6)) + G(102, 94, -62, brush(18, 6)) + G(100, 130, -140, brush(26, 4.6)) + G(100, 130, -40, brush(24, 4.6)); }
+  else if (center === 2) { p += `<path d="M90 92c4-12 22-12 25 2 2 12-8 20-16 18-8-2-12-10-9-20z" opacity=".9"/>` + G(108, 88, -50, `<path d="M0 0l3 -7l2 5l4 -5l1 7z"/>`);
+    for (let i = 0; i <= 14; i++) { const t = 130 + i * 20, [x, y] = polar(36, t), side = i % 2 ? 1 : -1; p += G(x, y, t + 90 + side * 45, brush(10, 3.3)); } }
+  else if (center === 3) { for (let k = 0; k < 4; k++) { const t = 45 + k * 90, [x, y] = polar(32, t); p += G(x, y, t + 90, `<path d="M0 6C-12 4 -18 -6 -14 -16C-10 -8 -5 -2 0 0Z"/><path d="M0 6C12 4 18 -6 14 -16C10 -8 5 -2 0 0Z"/><circle cx="-3" cy="-8" r="1.8"/><circle cx="3" cy="-8" r="1.8"/><circle cx="0" cy="-12" r="1.8"/>`); } s += `<path d="${wobble(R, 15, .03)}" fill="none" stroke="${col}" stroke-width="1.2"/>`; }
+  return s + `<g fill="${col}" opacity=".9">${p}</g>`;
+}
+function marks(R, col) { // japandi brushwork
+  const v = Math.floor(R() * 7); let s = "";
+  if (v === 0) { for (let y = 30; y < 175; y += 15) for (let x = 30; x < 175; x += 15) { const jx = x + (R() - .5) * 4 + (y / 15 % 2) * 7, jy = y + (R() - .5) * 4; s += `<ellipse cx="${P(jx)}" cy="${P(jy)}" rx="${P(3 + R() * 1.4)}" ry="${P(4 + R() * 1.6)}" transform="rotate(${P(R() * 40 - 20)} ${P(jx)} ${P(jy)})" fill="${col}" opacity="${(.75 + R() * .25).toFixed(2)}"/>`; } }
+  else if (v === 1) { for (let y = 34; y < 172; y += 22) for (let x = 28 + (y % 44 ? 12 : 0); x < 175; x += 30) s += G(x, y, (R() - .5) * 10, `<rect x="-11" y="-6" width="${P(18 + R() * 6)}" height="${P(11 + R() * 3)}" rx="5" fill="${col}" opacity="${(.7 + R() * .3).toFixed(2)}"/>`); }
+  else if (v === 2) { const n = 36; for (let i = 0; i < n; i++) { const a = i * 360 / n + R() * 3, [x1, y1] = polar(12 + R() * 6, a), [x2, y2] = polar(84, a + (R() - .5) * 3); s += `<path d="M${P(x1)} ${P(y1)}L${P(x2)} ${P(y2)}" stroke="${col}" stroke-width="${P(1.6 + R() * 1.6)}" stroke-linecap="round"/>`; } }
+  else if (v === 3) { for (let q = 0; q < 4; q++) { const base = q * 90; for (let i = 0; i < 9; i++) { const a = base + 10 + i * 8, [x1, y1] = polar(8, base + 45), [x2, y2] = polar(84, a); s += `<path d="M${P(x1)} ${P(y1)}L${P(x2)} ${P(y2)}" stroke="${col}" stroke-width="1.6" stroke-linecap="round"/>`; } } s += `<path d="M18 100L182 100M100 18L100 182" stroke="${col}" stroke-width="2.4"/>`; }
+  else if (v === 4) { const n = 1 + Math.floor(R() * 3); for (let i = 0; i < n; i++) s += `<path d="${wobble(R, 68 - i * 7, .02)}" fill="none" stroke="${col}" stroke-width="${P(1.4 + R())}"/>`; }
+  else if (v === 5) { let d = "M100 100"; for (let t = 0; t < 34; t += .25) { const r = 2.4 * t; d += `L${P(100 + r * Math.cos(t) + (R() - .5) * 1.5)} ${P(100 + r * Math.sin(t) + (R() - .5) * 1.5)}`; } s += `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>`; }
+  else { for (let r = 0; r < 9; r++) { const y = 26 + r * 17; for (let x = 18; x < 182; x += 14) s += `<ellipse cx="${P(x + (r % 2) * 7)}" cy="${P(y)}" rx="4.6" ry="3" fill="${col}" opacity="${(.7 + R() * .3).toFixed(2)}"/>`; } }
+  return s;
+}
+const CLAY = { terra: "#B4693A", ox: "#8E2F22", slate: "#93A1A6", black: "#2A2622", ochre: "#C69A45", sage: "#7E8A5A" };
+function twist(R) {
+  const comp = Math.floor(R() * 3); let a = "";
+  const stripe = (x, y, w, h, c, rot = 0) => `<rect x="${P(x)}" y="${P(y)}" width="${P(w)}" height="${P(h)}" rx="${P(w / 2.5)}" fill="${c}" transform="rotate(${P(rot)} ${P(x + w / 2)} ${P(y + h / 2)})"/>`;
+  if (comp === 0) { const fx = 70 + R() * 30; a += stripe(-10, 40 + R() * 20, 220, 48, CLAY.slate, -3 + R() * 6); for (let i = 0; i < 9; i++) a += stripe(8 + i * 22 + R() * 4, 112 + R() * 8, 11 + R() * 3, 100, CLAY.terra, -2 + R() * 4); for (let i = 0; i < 5; i++) { const r = 18 + i * 9; a += `<path d="M${P(fx - r)} 96A${r} ${P(r * 1.05)} 0 0 1 ${P(fx + r)} 96" fill="none" stroke="${CLAY.black}" stroke-width="4.2" stroke-linecap="round"/>`; } a += stripe(4, 96 + R() * 6, 100, 13, CLAY.ox, -2); }
+  else if (comp === 1) { a += `<circle cx="${P(60 + R() * 20)}" cy="140" r="62" fill="${pick(R, [CLAY.slate, CLAY.ochre])}" opacity=".85"/>` + `<g fill="${CLAY.terra}">${G(104, 128, -90 + (R() - .5) * 60, fan(68, R))}</g>`; for (let i = 0; i < 7; i++) a += `<circle cx="${P(30 + i * 22 + R() * 4)}" cy="${P(32 + R() * 6)}" r="4.2" fill="${CLAY.black}"/>`; }
+  else { a += stripe(-10, 70 + R() * 10, 220, 44, CLAY.ochre, -14 + R() * 8); const p0 = [20, 160], p1 = [90 + R() * 30, 110], p2 = [180, 30]; a += `<path d="M${p0}Q${p1} ${p2}" fill="none" stroke="${CLAY.black}" stroke-width="3" stroke-linecap="round"/>`; for (let i = 0; i < 10; i++) { const t = .06 + i * .095, [x, y] = quad(p0, p1, p2, t), ang = quadAng(p0, p1, p2, t); a += `<g fill="${[CLAY.ox, CLAY.sage, CLAY.terra][i % 3]}">${G(x, y, ang + (i % 2 ? 55 : -55), brush(30 + R() * 8, 9))}</g>`; } }
+  return a;
+}
+function relief(R) { // speckled plate with an embossed sprig
+  const [x, y] = polar(52, 20 + R() * 120), a = R() * 360;
+  const sprig = G(x, y, a, `<path d="M0 0c6-4 12-5 20-4" fill="none" stroke-width="1.6"/><circle cx="20" cy="-4" r="3.4"/><circle cx="15" cy="-8" r="2.8"/><circle cx="24" cy="-9" r="2.6"/><circle cx="9" cy="-4" r="2.4"/>`);
+  return `<g stroke="#000" fill="#000" opacity=".08" transform="translate(.8 1)">${sprig}</g><g stroke="#fff" fill="#fff" opacity=".55">${sprig}</g>`;
+}
+function plateArt(R, uid) {
+  const glaze = pick(R, GLAZES), sh = shape(R, .04), outline = sh.path(90); wobble(R, 68, .03);
+  const well = sh.path(68), rim = sh.path(85);
+  const fam = R(), ink = pickInk(R); R();
+  let deco = "", fleck = 60 + Math.floor(R() * 120);
+  WARP = sh;
+  if (fam < .4) deco = `<g clip-path="url(#r${uid})"><g filter="url(#olla-soft)">${carmen(R, ink)}</g></g>`;
+  else if (fam < .7) deco = `<g clip-path="url(#r${uid})"><g filter="url(#olla-soft)">${marks(R, ink)}</g></g>`;
+  else if (fam < .85) { WARP = null; deco = `<g filter="url(#olla-rough)">${twist(R)}</g>`; fleck = 110; }
+  else { deco = relief(R); fleck = 220; }
+  WARP = null;
+  return `<defs><clipPath id="c${uid}"><path d="${outline}"/></clipPath><clipPath id="r${uid}"><path d="${rim}"/></clipPath></defs>
+    <path d="${outline}" fill="${glaze}"/>
+    <g clip-path="url(#c${uid})">${deco}${speckle(R, fleck, 92, "#6B4A2E")}<path d="${well}" fill="none" stroke="#5a4520" stroke-opacity=".07" stroke-width="5"/></g>
+    <path d="${outline}" fill="none" stroke="#000" stroke-opacity=".06" stroke-width="1"/>
+    <ellipse cx="70" cy="56" rx="32" ry="9" fill="#fff" opacity=".28" transform="rotate(-30 70 56)"/>`;
+}
+function peltre(R, uid) {
+  const v = Math.floor(R() * 3), rim = v === 2 ? "#8E2F22" : "#1F2A44";
+  let s = `<defs><radialGradient id="w${uid}" cx="45%" cy="40%" r="65%"><stop offset="0" stop-color="#FBF8F1"/><stop offset="1" stop-color="#DCD5C6"/></radialGradient></defs>`;
+  s += `<circle cx="100" cy="100" r="95" fill="#F3EEE3"/><circle cx="100" cy="100" r="64" fill="url(#w${uid})"/><circle cx="100" cy="100" r="64" fill="none" stroke="#000" stroke-opacity=".1" stroke-width="1.4"/>`;
+  s += v === 1 ? speckle(R, 140, 92, "#4A5A7A") : speckle(R, 40, 92, "#6B4A2E");
+  s += `<circle cx="100" cy="100" r="92.5" fill="none" stroke="${rim}" stroke-width="5.5"/>`;
+  const chips = 1 + Math.floor(R() * 3);
+  for (let i = 0; i < chips; i++) { const [x, y] = polar(86 + R() * 6, R() * 360), r = 2.5 + R() * 3.5; let pts = ""; for (let k = 0; k < 7; k++) { const t = k / 7 * Math.PI * 2, rr = r * (.6 + R() * .6); pts += `${P(x + rr * Math.cos(t))},${P(y + rr * Math.sin(t))} `; } s += `<polygon points="${pts}" fill="#1A1A1E" stroke="#C9C7BE" stroke-width="1"/>`; }
+  return s + `<ellipse cx="68" cy="52" rx="34" ry="10" fill="#fff" opacity=".45" transform="rotate(-32 68 52)"/>`;
+}
+
+// ---------- ingredient line drawings (cobalt or oxblood, laid over the plate off-register) ----------
+const DOODLES = {
+  fish: '<path d="M14 52c14-16 40-20 60-8l12-10c-2 8-2 16 0 26l-12-9c-20 12-46 10-60-6z"/><circle cx="28" cy="48" r="1.8"/><path d="M40 42c2 6 2 12 0 18"/>',
+  lemon: '<path d="M22 52c-4-14 10-28 28-28s32 12 30 26c-2 16-18 24-32 22S24 64 22 52z"/><path d="M18 50c-3 0-5 2-5 3s3 2 6 1M84 46c3-1 6 0 6 2s-3 3-6 2"/><circle cx="42" cy="44" r="1"/><circle cx="56" cy="40" r="1"/><circle cx="52" cy="56" r="1"/>',
+  bread: '<path d="M12 56c-2-12 18-22 40-24 22-2 38 4 38 14 0 12-22 20-44 22S14 66 12 56z"/><path d="M30 44l6 10M44 40l6 10M58 38l6 10M72 40l5 8"/>',
+  squash: '<path d="M50 30c-18 0-32 10-32 26 0 14 14 22 32 22s32-8 32-22c0-16-14-26-32-26z"/><path d="M50 32c-8 10-8 34 0 46M50 32c8 10 8 34 0 46M30 38c-6 10-4 26 4 34M70 38c6 10 4 26-4 34"/><path d="M50 32c0-6 2-10 6-12"/>',
+  carrot: '<path d="M30 30c10-6 22-2 26 6L36 86c-2 4-6 4-6-2z"/><path d="M38 44l6 2M36 56l6 2M34 68l5 2"/><path d="M48 30c2-8 8-14 14-16M44 30c-2-8-8-12-14-14M50 32c6-4 12-4 18-2"/>',
+  tomato: '<path d="M50 30c-20 0-30 14-28 28 2 14 14 22 28 22s28-8 28-22c0-14-10-28-28-28z"/><path d="M50 30l-8-6M50 30l8-6M50 30l-12 2M50 30l12 2M50 30v-8"/>',
+  egg: '<path d="M50 18c-14 0-24 22-24 38 0 14 10 24 24 24s24-10 24-24c0-16-10-38-24-38z"/>',
+  garlic: '<path d="M50 24c-4 8-26 18-24 36 2 14 14 20 24 20s22-6 24-20c2-18-20-28-24-36z"/><path d="M50 26c-6 14-8 34-2 52M50 26c6 14 8 34 2 52"/><path d="M46 80c2 4 6 4 8 0"/>',
+  drumstick: '<path d="M60 22c14 2 22 14 18 28-4 12-16 18-26 16L36 80"/><path d="M60 22c-14 0-24 12-22 26 1 8 6 14 14 18"/><path d="M36 80c-4-2-8 0-8 4s4 6 6 4c0 4 4 6 6 4s2-6-2-8"/>',
+  meat: '<path d="M20 44c4-14 30-22 48-14 16 6 16 24 2 34-14 10-40 12-50-2-4-6-4-12 0-18z"/><path d="M30 48c8-8 26-12 36-4"/><circle cx="62" cy="54" r="5"/>',
+  choc: '<path d="M22 26l52-4 4 50-54 6z"/><path d="M24 44l52-4M26 60l52-4M40 24l4 52M58 22l4 52"/>',
+  avocado: '<path d="M50 18c-10 0-14 14-20 26-8 16-2 34 20 34s28-18 20-34c-6-12-10-26-20-26z"/><circle cx="50" cy="58" r="10"/>',
+  pear: '<path d="M50 26c-8 0-10 12-12 18-8 6-14 14-12 24 2 10 12 14 24 14s22-4 24-14c2-10-4-18-12-24-2-6-4-18-12-18z"/><path d="M50 26c0-6 2-10 4-12M54 18c6-4 12-2 14 2-6 2-10 2-14-2"/>',
+  apple: '<path d="M50 32c-8-6-26-4-28 14-2 18 12 32 28 30 16 2 30-12 28-30-2-18-20-20-28-14z"/><path d="M50 32c0-8 2-12 6-14M56 22c6-4 12-2 14 2-6 2-10 2-14-2"/>',
+  beet: '<path d="M50 38c-16 0-24 12-22 22 2 12 14 20 22 30 8-10 20-18 22-30 2-10-6-22-22-22z"/><path d="M48 38c-4-10-10-18-18-20M52 38c2-10 8-18 16-22M50 38c0-10 0-18 2-24"/>',
+  leaf: '<path d="M20 78C24 44 48 22 82 20c-2 34-22 58-62 58z"/><path d="M20 78C40 58 56 42 74 28M40 60l-4-12M52 48l-2-12M58 44l12 2M46 56l14 2"/>',
+  cup: '<path d="M22 40h46c0 22-8 36-23 36S22 62 22 40z"/><path d="M68 46c8-2 14 2 12 10-2 6-8 8-14 6"/><path d="M36 30c-4-6 4-8 0-14M48 30c-4-6 4-8 0-14"/><path d="M18 82c18 4 38 4 56 0"/>',
+  bowl: '<path d="M14 46h72c-2 18-16 30-36 30S16 64 14 46z"/><circle cx="34" cy="42" r="4"/><circle cx="44" cy="40" r="4"/><circle cx="54" cy="42" r="4"/><circle cx="64" cy="40" r="4"/><circle cx="40" cy="34" r="4"/><circle cx="56" cy="34" r="4"/>',
+  seeds: '<path d="M30 40c4-6 10-6 12 0-2 6-8 8-12 0zM54 30c4-6 10-6 12 0-2 6-8 8-12 0zM60 56c4-6 10-6 12 0-2 6-8 8-12 0zM34 64c4-6 10-6 12 0-2 6-8 8-12 0zM46 48c3-5 8-5 10 0-2 5-7 6-10 0z"/>',
+  potato: '<path d="M22 50c0-14 14-24 32-22 18 2 28 12 26 24-2 14-16 22-32 20-16-2-26-10-26-22z"/><circle cx="40" cy="44" r="1.4"/><circle cx="58" cy="40" r="1.4"/><circle cx="62" cy="58" r="1.4"/><circle cx="44" cy="60" r="1.4"/>',
+  sprig: '<path d="M50 84C48 60 52 38 58 18"/><path d="M50 70c-8-2-14-8-16-16 8 0 14 6 16 16zM52 56c8-2 14-8 16-16-8 0-14 6-16 16zM54 40c-6-2-10-8-12-14 6 0 10 6 12 14z"/>',
+};
+const DOODLE_MAP = [
+  [/salmon|lachs|\bcod\b|fish|pescado|bacalao|fisch/, "fish"], [/chicken|pollo|hähnchen|hühn|pernil/, "drumstick"], [/beef|chuck|\bres\b|rind|carne|roast/, "meat"],
+  [/pumpkin seed butter/, "seeds"], [/pumpkin|squash|kürbis|calabaza|butternut|hokkaido/, "squash"], [/potato|\bpapa|kartoffel/, "potato"], [/bread|sourdough|\bpan\b|brot|toast|loaf/, "bread"],
+  [/brownie|chocolate|schokolade|cacao|kakao|cocoa|\bbars?\b|\bdates?\b|datteln/, "choc"], [/avocado|aguacate/, "avocado"], [/pear|birne|pera/, "pear"], [/apple|manzana|apfel/, "apple"],
+  [/beet|remolacha|rote bete/, "beet"], [/carrot|möhre|karotte|zanahoria/, "carrot"], [/tomat/, "tomato"], [/spinach|espinaca|spinat|sigeumchi/, "leaf"],
+  [/latte|coffee|kaffee|café|leche|milk|\btea\b|jugo|juice|drink/, "cup"], [/chickpea|garbanzo|lentil|lenteja|kichererbse|linse|bowl/, "bowl"], [/granola|\boats?\b|seed|semilla|samen|cookie|ball/, "seeds"],
+  [/\beggs?\b|huevo|\bei\b/, "egg"], [/lemon|lime|limón|limon|zitrone/, "lemon"], [/garlic|\bajo\b|knoblauch/, "garlic"],
+];
+function doodleFor(r) {
+  const title = String(r.title || "").toLowerCase();
+  for (const [re, k] of DOODLE_MAP) if (re.test(title)) return k;
+  const hay = [...(r.categories || []), ...(r.ingredients || []).slice(0, 4).map(i => i.name)].join(" ").toLowerCase();
+  for (const [re, k] of DOODLE_MAP) if (re.test(hay)) return k;
+  return "sprig";
+}
+function dishSVG(r, big) {
+  const R = rng(r.id || r.title), uid = String(r.id || "x").replace(/[^a-z0-9]/gi, "") + (big ? "b" : "t");
+  const soup = (r.categories || []).includes("Soups");
+  let art = soup ? peltre(R, uid) : plateArt(R, uid);
+  // r.plate re-throws only the plate; the ink drawing keeps its own seed, so it stays the same
+  if (r.plate) { const R2 = rng(String(r.plate)); art = soup ? peltre(R2, uid) : plateArt(R2, uid); }
+  const col = R() < .55 ? INK.cobalt : INK.oxblood, side = R() < .5 ? -1 : 1, dx = side * (24 + R() * 8), dy = 18 + R() * 10, rot = (R() - .5) * 30;
+  return `<svg class="plate" viewBox="0 0 200 200" aria-hidden="true">${art}</svg>
+    <svg class="doodle" viewBox="0 0 100 100" aria-hidden="true" style="transform:translate(${P(dx)}%,${P(dy)}%) rotate(${P(rot)}deg) scale(.5)"><g fill="none" stroke="${col}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#olla-line)">${DOODLES[doodleFor(r)]}</g></svg>`;
+}
+
+// ---------- constants ----------
+const fmtTime = m => m < 60 ? `${m} min` : `${Math.floor(m / 60)} h${m % 60 ? ` ${m % 60} min` : ""}`;
+const SEASONS = [["spring","Spring"],["summer","Summer"],["fall","Fall"],["winter","Winter"]];
+const AISLES = [["produce","Fruit & vegetables"],["bakery","Bread & bakery"],["dairy","Dairy & eggs"],["meat","Meat & fish"],["pantry","Pantry"],["spices","Spices & seasonings"],["frozen","Frozen"],["drinks","Drinks"],["other","Other"]];
+const AISLE_NAME = Object.fromEntries(AISLES);
+const LANG = { en: "English", de: "Deutsch", es: "Español" };
+const M = { g: 1, kg: 1000, oz: 28.3495, lb: 453.592 };
+const V = { ml: 1, l: 1000, tsp: 4.929, tbsp: 14.787, cup: 236.588, fl_oz: 29.574 };
+const nowSeason = (() => { const m = new Date().getMonth(); return m < 2 || m === 11 ? "winter" : m < 5 ? "spring" : m < 8 ? "summer" : "fall"; })();
+
+// ---------- state ----------
+const S = {
+  recipes: [], shop: [], settings: { showSourceLink: true }, loaded: false, db: null, sample: null, imgLimits: null,
+  view: "recipes", detail: null, servings: null, mult: 1, viewLang: null,
+  units: load("olla-units", "metric"), prefLang: load("olla-lang", "orig"), season: null, cat: null, q: "",
+};
+function load(k, d) { try { return localStorage.getItem(k) || d; } catch { return d; } }
+function save(k, v) { try { localStorage.setItem(k, v); } catch {} }
+// Brand rule: no emoji anywhere on the page. Anything that slips into data is dropped before display.
+const esc = s => String(s ?? "").replace(/\p{Extended_Pictographic}\uFE0F?/gu, "").replace(/\s{2,}/g, " ").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+// ---------- unit engine ----------
+const FR = [[0,""],[1/8,"⅛"],[1/4,"¼"],[1/3,"⅓"],[1/2,"½"],[2/3,"⅔"],[3/4,"¾"],[1,""]];
+function frac(x) {
+  if (x >= 10) return String(Math.round(x));
+  let w = Math.floor(x); const r = x - w;
+  const b = FR.filter(f => x < 2 || f[0] !== 1/8).reduce((a, f) => Math.abs(f[0] - r) < Math.abs(a[0] - r) ? f : a);
+  if (b[0] === 1) return String(w + 1);
+  if (!b[1]) return w ? String(w) : "⅛";
+  return (w ? w : "") + b[1];
+}
+function roundTo(x, step) { return Math.max(step, Math.round(x / step) * step); }
+function trim(n, d) { return String(Number(n.toFixed(d))); }
+function fmtMass(g) { if (g >= 1000) return [trim(g / 1000, 2), "kg"]; return [String(g < 20 ? Math.max(1, Math.round(g)) : g < 200 ? roundTo(g, 5) : roundTo(g, 10)), "g"]; }
+function fmtVol(ml) { if (ml >= 1000) return [trim(ml / 1000, 2), "l"]; return [String(ml < 20 ? Math.max(1, Math.round(ml)) : ml < 200 ? roundTo(ml, 5) : roundTo(ml, 10)), "ml"]; }
+function plural(n, s, p) { return ["1","½","⅓","¼","⅛","⅔","¾"].includes(n) ? s : p; }
+function fmtCups(c) {
+  if (c >= 0.24) { const t = frac(c); return [t, plural(t, "cup", "cups")]; }
+  const tb = c * 16; if (tb >= 0.9) return [frac(tb), "tbsp"]; return [frac(tb * 3), "tsp"];
+}
+function fmtUsVol(ml) { return fmtCups(ml / V.cup); }
+function fmtOz(g) {
+  const oz = g / M.oz;
+  if (oz >= 16) return [frac(Math.round(oz / 16 * 4) / 4), "lb"];
+  if (oz < 1) return [frac(Math.round(oz * 4) / 4), "oz"];
+  return [frac(Math.round(oz * 2) / 2), "oz"];
+}
+function conv(q, u, gpc, sys) {
+  u = (u || "").trim(); const lu = u.toLowerCase();
+  if (q == null) return ["", u];
+  if (sys === "metric") {
+    if (lu in M) return fmtMass(q * M[lu]);
+    if (lu === "cup" && gpc) return fmtMass(q * gpc);
+    if (lu === "cup" || lu === "fl_oz" || lu === "ml" || lu === "l") return fmtVol(q * V[lu]);
+  } else {
+    if (lu === "g" || lu === "kg") { const g = q * M[lu]; return gpc ? fmtCups(g / gpc) : fmtOz(g); }
+    if (lu === "oz" || lu === "lb") return fmtOz(q * M[lu]);
+    if (lu === "ml" || lu === "l" || lu === "fl_oz") return fmtUsVol(q * V[lu]);
+    if (lu === "cup") { const t = frac(q); return [t, plural(t, "cup", "cups")]; }
+  }
+  if (lu === "tsp" || lu === "tbsp") return [frac(q), lu];
+  if (lu === "pinch") { const t = frac(q); return [t, plural(t, "pinch", "pinches")]; }
+  return [q % 1 === 0 ? String(q) : frac(q), u];
+}
+const NATIVE = { metric: ["g", "kg", "ml", "l"], us: ["cup", "oz", "lb", "fl_oz"] };
+function asWritten(ing, factor, sys) { return factor === 1 && ing.q != null && NATIVE[sys].includes((ing.u || "").toLowerCase()); }
+function amount(ing, factor, sys) {
+  if (asWritten(ing, factor, sys)) { const u = ing.u === "cup" ? plural(frac(ing.q), "cup", "cups") : ing.u; const w = v => ing.u === "cup" ? frac(v) : trim(v, 3); return [ing.q2 != null ? w(ing.q) + "–" + w(ing.q2) : w(ing.q), u]; }
+  const q = ing.q == null ? null : ing.q * factor;
+  const a = conv(q, ing.u, ing.gpc, sys);
+  if (ing.q2 != null && q != null) { const b = conv(ing.q2 * factor, ing.u, ing.gpc, sys); if (a[1] === b[1] && a[0] !== b[0]) return [a[0] + "–" + b[0], a[1]]; }
+  return a;
+}
+function convText(t, sys) {
+  return esc(t).replace(/\{\{\s*(\d+(?:[.,]\d+)?)\s*(C|F|cm|in)\s*\}\}/gi, (_, n, u) => {
+    const v = parseFloat(n.replace(",", ".")); u = u.toLowerCase(); let out;
+    if (u === "c") out = sys === "us" ? Math.round((v * 9 / 5 + 32) / 25) * 25 + " °F" : Math.round(v) + " °C";
+    else if (u === "f") out = sys === "us" ? Math.round(v) + " °F" : Math.round(((v - 32) * 5 / 9) / 10) * 10 + " °C";
+    else if (u === "cm") out = sys === "us" ? Math.round(v / 2.54) + " in" : Math.round(v) + " cm";
+    else out = sys === "us" ? Math.round(v) + " in" : Math.round(v * 2.54) + " cm";
+    return '<span class="conv">' + out + "</span>";
+  });
+}
+function toBase(it) {
+  const lu = (it.u || "").toLowerCase(); if (it.q == null) return null;
+  if (lu in M) return { dim: "mass", v: it.q * M[lu] };
+  if (lu === "cup" && it.gpc) return { dim: "mass", v: it.q * it.gpc };
+  if (lu in V) return { dim: "vol", v: it.q * V[lu] };
+  return { dim: "n:" + lu, v: it.q };
+}
+
+// ---------- fidelity helpers (same rules as the import tests) ----------
+const UF = { "½": .5, "⅓": 1 / 3, "⅔": 2 / 3, "¼": .25, "¾": .75, "⅛": .125 };
+function numbersIn(s) {
+  const out = []; const re = /(\d+)\s+(\d+)\/(\d+)|(\d+)\s*([½⅓⅔¼¾⅛])|(\d+)\/(\d+)|([½⅓⅔¼¾⅛])|(\d+(?:[.,]\d+)?)/g; let m;
+  while ((m = re.exec(String(s || "")))) { let v; if (m[1]) v = +m[1] + m[2] / m[3]; else if (m[4]) v = +m[4] + UF[m[5]]; else if (m[6]) v = m[6] / m[7]; else if (m[8]) v = UF[m[8]]; else v = parseFloat(m[9].replace(",", ".")); out.push(Math.round(v * 1000) / 1000); }
+  return out;
+}
+const hasNum = (arr, v) => arr.some(x => Math.abs(x - v) < 0.011);
+const tokens = s => (String(s || "").match(/\{\{[^}]+\}\}/g) || []).sort().join("|");
+const digitsOf = s => numbersIn(String(s || "").replace(/\{\{[^}]+\}\}/g, "")).sort((a, b) => a - b).join(",");
+
+
+// ---------- local database (standalone web app) ----------
+// Same small API the page uses on claude.ai: collection(name).onSnapshot/add, doc(path).update/set/delete/onSnapshot.
+function localDB(base) {
+  const read = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
+  const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+  let over = read("olla-recipe-edits", {});      // per recipe: favorite, translations, deleted
+  let mine = read("olla-recipes-added", []);     // recipes added on this phone (none for now)
+  let shop = read("olla-shopping", []);
+  let settings = read("olla-settings", null) || { ...(base.settings || {}) };
+  const subs = { recipes: [], shopping: [], settings: [] };
+  const recipes = () => [...(base.recipes || []), ...mine].filter(r => !over[r.id]?.deleted).map(r => {
+    const o = over[r.id] || {};
+    return { ...r, ...(o.favorite != null ? { favorite: o.favorite } : {}), translations: { ...(r.translations || {}), ...(o.translations || {}) } };
+  });
+  const snap = list => ({ docs: list.map(r => ({ id: r.id, data: () => { const { id, ...d } = r; return d; } })) });
+  const emit = c => {
+    if (c === "recipes") subs.recipes.forEach(f => f(snap(recipes())));
+    if (c === "shopping") { write("olla-shopping", shop); subs.shopping.forEach(f => f(snap(shop))); }
+    if (c === "settings") { write("olla-settings", settings); subs.settings.forEach(f => f({ exists: true, data: () => settings })); }
+  };
+  const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+  return {
+    collection(c) { return {
+      onSnapshot(f) { subs[c].push(f); setTimeout(() => emit(c)); return () => {}; },
+      async add(d) { const id = uid(); if (c === "shopping") shop.push({ id, ...d }); else { mine.push({ id, ...d }); write("olla-recipes-added", mine); } emit(c); return { id }; },
+    }; },
+    doc(path) { const [c, id] = path.split("/"); return {
+      onSnapshot(f) { subs.settings.push(f); setTimeout(() => emit("settings")); return () => {}; },
+      async set(d) { if (c === "settings") { settings = { ...d }; emit("settings"); } },
+      async update(p) {
+        if (c === "shopping") { shop = shop.map(i => i.id === id ? { ...i, ...p } : i); return emit(c); }
+        const o = over[id] || {};
+        over[id] = { ...o, ...p, ...(p.translations ? { translations: { ...(o.translations || {}), ...p.translations } } : {}) };
+        write("olla-recipe-edits", over); emit("recipes");
+      },
+      async delete() {
+        if (c === "shopping") { shop = shop.filter(i => i.id !== id); return emit(c); }
+        over[id] = { ...(over[id] || {}), deleted: true }; write("olla-recipe-edits", over); emit("recipes");
+      },
+    }; },
+  };
+}
+
+// ---------- data ----------
+const recipeById = id => S.recipes.find(r => r.id === id);
+async function boot() {
+  render();
+  let db = null;
+  if (window.claude) {
+    claude.use("sample").then(async s => { S.sample = s; if (s) S.imgLimits = (await s.limits().catch(() => null))?.images || null; });
+    db = await claude.use("db");
+  } else {
+    try { db = localDB(await fetch("recipes.json", { cache: "no-cache" }).then(r => r.json())); } catch {}
+    if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) navigator.serviceWorker.register("sw.js").catch(() => {});
+  }
+  S.db = db;
+  if (!db) { S.loaded = true; render(); return; }
+  db.collection("recipes").onSnapshot(snap => {
+    S.recipes = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+    S.loaded = true; render();
+  }, () => { S.loaded = true; render(); });
+  db.collection("shopping").onSnapshot(snap => {
+    S.shop = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a, b) => (a.createdAt || 0) - (b.createdAt || 0));
+    render();
+  });
+  db.doc("settings/app").onSnapshot(d => { S.settings = { showSourceLink: true, ...(d.exists ? d.data() : {}) }; render(); });
+}
+
+// a recipe as shown: the original, merged with a saved translation when one is chosen
+function shown(r) {
+  const lang = S.viewLang && S.viewLang !== r.lang ? S.viewLang : null;
+  const t = lang && r.translations && r.translations[lang];
+  if (!t) return { ...r, _translated: false };
+  return { ...r, title: t.title || r.title, servingsText: t.servingsText ?? r.servingsText, notes: t.notes ?? r.notes, incomplete: t.incomplete ?? r.incomplete,
+    steps: t.steps || r.steps, ingredients: (r.ingredients || []).map((i, n) => ({ ...i, ...(t.ingredients?.[n] || {}) })), _translated: true };
+}
+
+// ---------- render ----------
+function render() {
+  const app = document.getElementById("app");
+  app.innerHTML = S.detail ? renderDetail() : S.view === "shopping" ? renderShop() : renderList();
+  renderTabs();
+}
+function unitToggle() {
+  return `<div class="units" role="group" aria-label="Measurements"><button data-act="units" data-v="metric" aria-pressed="${S.units === "metric"}">metric</button><button data-act="units" data-v="us" aria-pressed="${S.units === "us"}">US</button></div>`;
+}
+function renderTabs() {
+  const open = S.shop.filter(i => !i.checked).length;
+  const t = (v, ic, l, extra = "") => `<button class="tab" data-act="tab" data-v="${v}" ${!S.detail && S.view === v ? 'aria-current="page"' : ""}>${ic}<span>${l}</span>${extra}</button>`;
+  document.getElementById("tabs").innerHTML = t("recipes", I.book, "Recetas") + t("favorites", I.heart, "Favoritas") +
+    t("shopping", I.basket, "Mercado", open ? `<span class="badge">${open}</span>` : "") + `<button class="tab" data-act="import">${I.pen}<span>Añadir</span></button>`;
+}
+function header(sub) {
+  return `<header class="head"><span class="mark" role="img" aria-label="Olla">${WORDMARK}</span>
+    <div class="head-r">${unitToggle()}<button class="gear" data-act="settings" aria-label="Settings">${I.gear}</button></div></header>
+    <p class="sub ital">${sub}</p>`;
+}
+function renderList() {
+  const favOnly = S.view === "favorites";
+  let list = S.recipes.filter(r => !favOnly || r.favorite);
+  const cats = [...new Set(list.flatMap(r => r.categories || []))].sort();
+  if (S.season) list = list.filter(r => (r.seasons || []).includes(S.season));
+  if (S.cat) list = list.filter(r => (r.categories || []).includes(S.cat));
+  if (S.q) { const q = S.q.toLowerCase(); list = list.filter(r => (r.title + " " + (r.ingredients || []).map(i => i.name).join(" ") + " " + (r.source?.author || "") + " " + Object.values(r.translations || {}).map(t => t.title).join(" ")).toLowerCase().includes(q)); }
+  const n = S.recipes.length;
+  let body;
+  if (!S.loaded) body = `<div class="empty"><p class="ital">Opening the recipe book…</p></div>`;
+  else if (!S.db) body = `<div class="empty"><h2>The book lives in Claude</h2><p>Open this page in Claude to see and save recipes.</p></div>`;
+  else if (!n) body = `<div class="empty"><h2>A blank page</h2><p>Send an Instagram link to Claude in chat, or tap Añadir and paste the caption.</p></div>`;
+  else if (favOnly && !S.recipes.some(r => r.favorite)) body = `<div class="empty"><h2>No favorites yet</h2><p>Tap the heart on a recipe to keep it here.</p></div>`;
+  else if (!list.length) body = `<div class="empty"><h2>Nothing on this page</h2><p>Try another season or dish.</p></div>`;
+  else body = `<div class="grid">${list.map(tile).join("")}</div>`;
+  return header(favOnly ? "las favoritas" : `<span class="tagline">taste, collected</span> · ${n} recipe${n === 1 ? "" : "s"}`) + `
+  <input class="search" id="q" type="search" placeholder="search a dish or an ingredient" value="${esc(S.q)}" aria-label="Search recipes">
+  <div class="filters">
+    <label class="pick${S.season ? " on" : ""}"><span class="caps">Season</span>
+      <select data-filter="season" aria-label="Season"><option value="">All seasons</option>${SEASONS.map(([k, l]) => `<option value="${k}"${S.season === k ? " selected" : ""}>${l}${k === nowSeason ? " (now)" : ""}</option>`).join("")}</select></label>
+    ${cats.length ? `<label class="pick${S.cat ? " on" : ""}"><span class="caps">Dish</span>
+      <select data-filter="cat" aria-label="Dish"><option value="">All dishes</option>${cats.map(c => `<option value="${esc(c)}"${S.cat === c ? " selected" : ""}>${esc(c)}</option>`).join("")}</select></label>` : ""}
+    ${S.season || S.cat ? `<button class="link clear" data-act="clear-filters">clear</button>` : ""}
+  </div>
+  ${S.recipes.some(r => r.example) && !favOnly ? `<p class="note-line ital"><span>The three starter recipes are examples.</span><button class="link" data-act="clear-examples">tear them out</button></p>` : ""}
+  ${body}`;
+}
+function tile(r) {
+  const d = S.prefLang !== "orig" && r.translations?.[S.prefLang] ? r.translations[S.prefLang].title : r.title;
+  const meta = [r.time ? r.time + " min" : "", LANG[r.lang] || ""].filter(Boolean).join(" · ");
+  return `<button class="tile" data-act="open" data-id="${esc(r.id)}">
+    <span class="dish">${dishSVG(r)}${r.favorite ? `<span class="fav" aria-label="Favorite">${I.heartFill}</span>` : ""}</span>
+    <h3>${esc(d)}</h3><span class="meta ital">${esc(meta)}${r.example ? ' · <span class="tag-mini">example</span>' : ""}${r.incomplete ? ' · <span class="tag-mini">incomplete</span>' : ""}</span></button>`;
+}
+function renderDetail() {
+  const r0 = recipeById(S.detail);
+  if (!r0) { S.detail = null; return renderList(); }
+  const r = shown(r0);
+  const base = r.servings || null;
+  const sv = base ? (S.servings || base) : null, f = base ? sv / base : S.mult;
+  let lastGroup = null;
+  const ings = (r.ingredients || []).map(i => {
+    let g = "";
+    if (i.group && i.group !== lastGroup) { g = `<li class="grp">${esc(i.group)}</li>`; lastGroup = i.group; }
+    const [n, u] = amount(i, f, S.units);
+    return g + `<li><span class="amt">${esc(n)} <small>${esc(u)}</small></span><span class="nm">${esc(i.name)}${i.note ? ` <i>· ${esc(i.note)}</i>` : ""}</span></li>`;
+  }).join("");
+  const src = r.source || {};
+  const seasons = (r.seasons || []).map(s => `<span class="s" style="--season:var(--${s})">${esc((SEASONS.find(x => x[0] === s) || [, s])[1].toLowerCase())}</span>`).join("");
+  const langs = ["en", "de", "es"].filter(l => l !== r0.lang);
+  const cur = S.viewLang && S.viewLang !== r0.lang ? S.viewLang : "orig";
+  const interp = r0.interpretations || [], warns = r0.importWarnings || [];
+  return `<div class="rbar"><button class="back" data-act="back">${I.back}<span class="caps" style="color:var(--ink)">Recetas</span></button>
+    <button class="heart" data-act="fav" aria-pressed="${!!r0.favorite}" aria-label="${r0.favorite ? "Remove from favorites" : "Add to favorites"}">${r0.favorite ? I.heartFill : I.heart}</button></div>
+  <section class="hero"><span class="dish">${dishSVG(r0, true)}</span>
+    <h1>${esc(r.title)}</h1>
+    <div class="byline">${[src.author ? esc(src.author) : "", r.time ? fmtTime(r.time) : r0.timeText ? esc(r0.timeText) : "", r.servingsText ? esc(r.servingsText) : ""].filter(Boolean).join('<span class="dot">·</span>')}</div>
+    <div class="tags">${seasons}${(r.categories || []).map(c => `<span>${esc(c.toLowerCase())}</span>`).join("")}</div></section>
+  <div class="loops"></div>
+  <div class="controls">
+    <span class="stepper" title="${base ? `The post makes ${base}` : "The post doesn't say how many it serves"}">${base ? '<span class="caps">Serves</span>' : ""}<button class="step-btn" data-act="sv" data-v="-1" aria-label="Less" ${(base ? sv <= 1 : f <= .5) ? "disabled" : ""}>${I.minus}</button>
+      <output aria-live="polite">${base ? sv : "×" + frac(f)}</output>
+      <button class="step-btn" data-act="sv" data-v="1" aria-label="More">${I.plus}</button></span>
+    <span class="ctl-right">${unitToggle()}
+      <label class="lang-pick"><select data-lang aria-label="Recipe language">
+        <option value="orig"${cur === "orig" ? " selected" : ""}>${esc(LANG[r0.lang] || "Original")}</option>
+        ${langs.map(l => `<option value="${l}"${cur === l ? " selected" : ""}>${LANG[l]}</option>`).join("")}</select></label></span>
+  </div>
+  ${r._translated ? `<p class="status">Translated by Claude from ${esc(LANG[r0.lang] || "the original")}; amounts, temperatures and times are kept.</p>` : '<p class="status" id="tr-status" aria-live="polite"></p>'}
+  ${r.incomplete ? `<div class="flag"><b>Incomplete in the source</b>${esc(r.incomplete)}</div>` : ""}
+  <div class="sec"><h2>Ingredients</h2><button class="btn" data-act="add-shop">${I.basket.replace("<svg", '<svg class="i"')} add to list</button></div>
+  <ul class="ings ruled">${ings}</ul>
+  ${(r.steps || []).length ? `<div class="sec"><h2>Method</h2></div><ol class="steps ruled">${r.steps.map(s => `<li><span>${convText(s, S.units)}</span></li>`).join("")}</ol>` : ""}
+  ${r.notes ? `<p class="nota">${convText(r.notes, S.units)}</p>` : ""}
+  ${S.settings.showSourceLink && (src.url || src.recipeUrl) ? `<div class="source"><span class="caps">Source</span>${src.url ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.url)}</a>` : ""}${src.recipeUrl ? `<a href="${esc(src.recipeUrl)}" target="_blank" rel="noopener">${esc(src.recipeUrl)}</a>` : ""}</div>` : ""}
+  <div class="danger">${S.confirmDelete === r0.id
+    ? `<span class="ital">Tear this page out for good?</span><button class="btn" data-act="del-yes" style="border-color:var(--oxblood);color:var(--oxblood)">Delete</button><button class="link" data-act="del-no">keep it</button>`
+    : `<button class="link" data-act="del">delete recipe</button>`}</div>`;
+}
+function renderShop() {
+  const groups = new Map();
+  for (const it of S.shop) { const key = (it.name || "").trim().toLowerCase(); if (!groups.has(key)) groups.set(key, { name: it.name, aisle: it.aisle || "other", items: [] }); groups.get(key).items.push(it); }
+  const rows = [...groups.values()].map(g => {
+    const checked = g.items.every(i => i.checked); const sums = new Map(); let gpc = null;
+    for (const it of g.items) { const b = toBase(it); if (it.gpc) gpc = it.gpc; if (!b) continue; const k = b.dim + "|" + (b.dim.startsWith("n:") ? (it.u || "") : ""); sums.set(k, { dim: b.dim, v: (sums.get(k)?.v || 0) + b.v, u: it.u }); }
+    const parts = [...sums.values()].map(s => s.dim === "mass" ? conv(s.v, "g", gpc, S.units).join(" ") : s.dim === "vol" ? conv(s.v, "ml", null, S.units).join(" ") : conv(s.v, s.u, null, S.units).join(" ").trim());
+    const from = [...new Set(g.items.map(i => i.recipeTitle).filter(Boolean))].join(", ");
+    return { ...g, checked, qty: parts.join(" + "), from, ids: g.items.map(i => i.id) };
+  });
+  const open = rows.filter(r => !r.checked), done = rows.filter(r => r.checked);
+  const row = r => `<li><button class="item" role="checkbox" aria-checked="${r.checked}" data-act="toggle" data-ids="${esc(r.ids.join(","))}" data-c="${r.checked}">
+    <span class="tick">${r.checked ? I.tick : ""}</span><span><span class="nm">${esc(r.name)}</span>${r.from ? `<span class="from">${esc(r.from)}</span>` : ""}</span><span class="q">${esc(r.qty)}</span></button></li>`;
+  const byAisle = AISLES.map(([k, l]) => [l, open.filter(r => (AISLE_NAME[r.aisle] ? r.aisle : "other") === k)]).filter(([, a]) => a.length);
+  return header(`lista del mercado · ${open.length} thing${open.length === 1 ? "" : "s"} to get`) + `<div class="loops red"></div>
+  <form class="shop-add" id="shop-form"><input id="shop-new" placeholder="add something… limes" aria-label="Add an item"><button class="btn" type="submit">add</button></form>
+  ${!S.shop.length ? `<div class="empty"><h2>Nothing to buy</h2><p>Open a recipe and tap add to list, or write an item above.</p></div>` : ""}
+  ${byAisle.map(([l, a]) => `<div class="aisle-h"><span class="caps">${esc(l)}</span></div><ul class="items ruled">${a.map(row).join("")}</ul>`).join("")}
+  ${done.length ? `<div class="aisle-h"><span class="caps">In the basket</span><button class="link" data-act="clear-done">clear ${done.length} checked</button></div><ul class="items ruled">${done.map(row).join("")}</ul>` : ""}
+  ${S.shop.length ? `<div class="danger">${S.confirmClearAll ? `<span class="ital">Start a fresh list?</span><button class="btn" data-act="clear-all-yes">Empty list</button><button class="link" data-act="clear-all-no">keep it</button>` : `<button class="link" data-act="clear-all">empty the whole list</button>`}</div>` : ""}`;
+}
+
+// ---------- sheets ----------
+const layer = document.getElementById("layer");
+function closeSheet() { layer.innerHTML = ""; S.importCtl?.abort(); S.importCtl = null; }
+function factorOf(r) { return r.servings ? (S.servings || r.servings) / r.servings : S.mult; }
+function openShopSheet() {
+  const r0 = recipeById(S.detail); if (!r0) return; const r = shown(r0); const f = factorOf(r0);
+  layer.innerHTML = `<div class="scrim" data-act="scrim"><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-t">
+    <h2 id="sh-t">Para el mercado</h2><p class="ital">Untick what you already have at home.</p>
+    <ul class="checklist ruled">${(r.ingredients || []).map((i, n) => { const [a, u] = amount(i, f, S.units);
+      return `<li><label><input type="checkbox" id="ing-${n}" data-n="${n}" checked><span><b>${esc(i.name)}</b><span class="q">${esc((a + " " + u).trim())}</span></span></label></li>`; }).join("")}</ul>
+    <div class="row"><button class="btn solid" data-act="shop-confirm">add to list</button><button class="link" data-act="close">cancel</button></div></div></div>`;
+}
+function openSettings() {
+  layer.innerHTML = `<div class="scrim" data-act="scrim"><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="st-t">
+    <h2 id="st-t">Settings</h2>
+    <div class="toggle"><span>Show the source link at the bottom of each recipe</span><button class="switch" role="switch" id="flag-src" aria-checked="${!!S.settings.showSourceLink}" data-act="flag-src" aria-label="Show source link"></button></div>
+    <div class="toggle"><span>Open recipes in</span><span class="langs">${[["orig", "original"], ["en", "English"], ["de", "Deutsch"], ["es", "Español"]].map(([k, l]) => `<button data-act="pref-lang" data-v="${k}" aria-pressed="${S.prefLang === k}">${l}</button>`).join("")}</span></div>
+    <p class="ital" style="font-size:14px">A recipe opens in your chosen language once a translation has been saved; otherwise in its original.</p>
+    <div class="row"><button class="btn" data-act="close">done</button></div></div></div>`;
+}
+function openImport() {
+  const img = S.imgLimits;
+  layer.innerHTML = `<div class="scrim" data-act="scrim"><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="im-t">
+    <h2 id="im-t">Una receta nueva</h2>
+    <p class="ital">Easiest: send the Instagram link to Claude in chat. Or paste the caption here${img ? " and add screenshots if the recipe is in the photos" : ""}. It stays in its original language, and nothing the post doesn't say gets filled in.</p>
+    <div class="field"><label class="caps" for="im-url">Post link</label><input id="im-url" type="url" placeholder="https://www.instagram.com/p/…"></div>
+    <div class="field"><label class="caps" for="im-text">Caption or recipe text</label><textarea id="im-text" placeholder="paste ingredients and steps…"></textarea></div>
+    ${img ? `<div class="field"><label class="caps" for="im-img">Screenshots (optional)</label><input id="im-img" type="file" multiple accept="${esc(img.mediaTypes.join(","))}" style="border:0"></div>` : ""}
+    <div class="status" id="im-status" aria-live="polite">${S.sample ? "" : "To add a recipe, send its link to Claude in chat. It arrives here with the next update."}</div>
+    <div class="row"><button class="btn solid" data-act="import-go" ${S.sample ? "" : "disabled"}>write it down</button><button class="link" data-act="close">cancel</button></div></div></div>`;
+}
+const PROMPT = `Copy this recipe from an Instagram post (caption text and/or screenshots) into JSON for a recipe book. Accuracy matters more than completeness: never fill a gap.
+Keep the recipe in its ORIGINAL language. Do not translate, correct spelling or expand abbreviations.
+Reply with only one JSON object:
+{"title":string,"lang":"en"|"es"|"de","author":string|null,"servings":number|null,"servingsText":string|null,"time":number|null,"timeText":string|null,
+"categories":string[],"seasons":string[],
+"ingredients":[{"group":string|null,"q":number|null,"q2":number|null,"u":string|null,"name":string,"sourceName":string|null,"note":string|null,"gpc":number|null,"aisle":string}],
+"steps":string[],"notes":string|null,"incomplete":string|null,"interpretations":[{"field":string,"note":string}]}
+Rules:
+- servings / time: ONLY if the post states them. servingsText / timeText: the post's exact words. Otherwise null.
+- One ingredient per thing listed. q = the amount as written, as a decimal ("1 1/2" -> 1.5); q2 only for ranges. If no number is written ("a pinch", "Drizzle", "to taste") q is null and those words go in note. Never invent an amount.
+- u: one of g, kg, ml, l, tsp, tbsp, cup, fl_oz, oz, lb, pinch when the text uses it in any language (EL/cda -> tbsp, TL/cdta -> tsp, Tasse/taza -> cup); a count word copied from the post ("cloves", "Zehe", "dientes", "can"); or null.
+- name and note use the post's own words. Group headers become group exactly as written.
+- gpc: grams per US cup only for things European cooks weigh (flour 125, sugar 200, butter 227, oats 90, rice 185, nuts 120, cocoa 85, grated cheese 100). null otherwise.
+- aisle: produce, bakery, dairy, meat, pantry, spices, frozen, drinks or other.
+- steps: the post's method in your own words but with EVERY number, time, temperature, pan size, ingredient and piece of equipment kept. Never add a number. Temperatures as {{180C}} / {{350F}} and pan sizes as {{20cm}} / {{9in}} exactly as the post gives them. If the post has no method, steps is [] and incomplete says so.
+- Never output emoji anywhere. If the post writes an ingredient as an emoji, put the word in the recipe's language in name, the post's exact text in sourceName, and add an interpretations entry with field "emoji" saying so in words.
+- If the post gives a temperature or size without a unit, explain your reading in interpretations.
+- categories: one or two of Breakfast, Mains, Soups, Salads, Sides, Baking, Desserts, Snacks, Drinks. seasons: subset of spring, summer, fall, winter.
+- notes: tips from the post (storage, serving), or null. Ignore hashtags and promotion.`;
+// a light version of the import tests, run against the pasted caption
+function importChecks(doc, caption) {
+  const w = [], nums = numbersIn(caption);
+  for (const i of doc.ingredients) { if (i.q != null && !hasNum(nums, i.q)) w.push(`“${i.name}”: the amount ${i.q} isn't in the caption`); if (i.q2 != null && !hasNum(nums, i.q2)) w.push(`“${i.name}”: the amount ${i.q2} isn't in the caption`); }
+  for (const t of (doc.steps.join(" ").match(/\{\{\s*\d+/g) || [])) { const n = +t.replace(/\D/g, ""); if (!hasNum(nums, n)) w.push(`the method mentions ${n}, which isn't in the caption`); }
+  if (doc.servings != null && !hasNum(nums, doc.servings)) { w.push(`servings ${doc.servings} isn't in the caption, so it was removed`); doc.servings = null; doc.servingsText = null; }
+  if (doc.time != null && !hasNum(nums, doc.time)) { w.push(`the time ${doc.time} min isn't in the caption, so it was removed`); doc.time = null; }
+  return w;
+}
+async function runImport() {
+  const st = document.getElementById("im-status");
+  const url = document.getElementById("im-url").value.trim();
+  const text = document.getElementById("im-text").value.trim();
+  const files = document.getElementById("im-img")?.files;
+  if (!text && !(files && files.length)) { st.className = "status err"; st.textContent = "Paste the caption or add a screenshot first. This page can't open Instagram itself."; return; }
+  const btn = layer.querySelector('[data-act="import-go"]'); btn.disabled = true;
+  st.className = "status"; st.textContent = "Claude is copying it into the book… up to a minute.";
+  S.importCtl = new AbortController();
+  try {
+    const opts = { signal: S.importCtl.signal };
+    if (files && files.length) opts.images = [...files].slice(0, S.imgLimits?.maxCount || 4);
+    const r = await S.sample.json(PROMPT + "\n\nPost link: " + (url || "none") + "\n\nCaption:\n" + text.slice(0, 20000), opts);
+    if (!r || !r.title || !Array.isArray(r.ingredients)) throw { code: "invalid_json" };
+    const doc = {
+      title: String(r.title), lang: ["en", "es", "de"].includes(r.lang) ? r.lang : "en",
+      source: { url: url || null, author: r.author || null, recipeUrl: null },
+      servings: r.servings == null ? null : Number(r.servings), servingsText: r.servingsText || null, time: r.time == null ? null : Number(r.time), timeText: r.timeText || null,
+      categories: (r.categories || []).map(String).slice(0, 3), seasons: (r.seasons || []).filter(s => SEASONS.some(x => x[0] === s)),
+      ingredients: r.ingredients.map(i => ({ group: i.group || null, q: i.q == null ? null : Number(i.q), q2: i.q2 == null ? null : Number(i.q2), u: i.u || null, name: String(i.name || ""), sourceName: i.sourceName || null, note: i.note || null, gpc: i.gpc ? Number(i.gpc) : null, aisle: AISLE_NAME[i.aisle] ? i.aisle : "other" })),
+      steps: (r.steps || []).map(String), notes: r.notes || null, incomplete: r.incomplete || null,
+      interpretations: (r.interpretations || []).filter(x => x && x.note).map(x => ({ field: String(x.field || ""), note: String(x.note) })),
+      favorite: false, createdAt: Date.now(), importedBy: "claude-in-app", schema: 2,
+    };
+    if (text) doc.importWarnings = importChecks(doc, text);
+    const ref = await S.db.collection("recipes").add(doc);
+    closeSheet(); S.detail = ref.id; S.servings = null; S.mult = 1; S.viewLang = null; render(); window.scrollTo(0, 0);
+    toast(doc.importWarnings?.length ? "Written down. Check the notes at the bottom." : "Written down. Give it a quick read.");
+  } catch (e) {
+    if (e?.code === "cancelled") return;
+    btn.disabled = false; st.className = "status err";
+    st.textContent = { not_granted: "Claude wasn't allowed to help on this page. Send the link in chat instead.", rate_limited: "Too many at once. Wait a minute and try again.",
+      invalid_json: "Claude couldn't find a full recipe in that text. Paste the whole caption, ingredients included.", image_rejected: "One screenshot couldn't be read. Try a PNG or JPEG.",
+      quota_exceeded: "The book is full. Delete a few recipes first." }[e?.code] || "That didn't finish. Try again in a moment.";
+  }
+}
+
+// ---------- translation ----------
+const TR_PROMPT = (lang, payload) => `Translate this recipe into ${LANG[lang]}. It is a faithful translation for a home cook, not an adaptation.
+Rules: translate every string; keep every number, fraction and {{token}} exactly as it is; do not add, drop, explain or round anything; never output emoji; keep the arrays the same length and in the same order; translate count words in "u" (like "cloves", "Zehe") but leave null as null.
+Reply with only JSON of exactly this shape: ${JSON.stringify({ title: "", servingsText: null, notes: null, incomplete: null, ingredients: [{ name: "", note: null, group: null, u: null }], steps: [""] })}
+
+${JSON.stringify(payload)}`;
+const STD_UNITS = new Set(["g", "kg", "ml", "l", "tsp", "tbsp", "cup", "fl_oz", "oz", "lb", "pinch"]);
+function validateTranslation(src, t) {
+  const bad = [];
+  if (!t || typeof t.title !== "string") return ["no title came back"];
+  if (!Array.isArray(t.ingredients) || t.ingredients.length !== src.ingredients.length) bad.push("the ingredient list changed length");
+  if (!Array.isArray(t.steps) || t.steps.length !== src.steps.length) bad.push("the number of steps changed");
+  (src.steps || []).forEach((s, n) => { const o = t.steps?.[n] || ""; if (tokens(s) !== tokens(o)) bad.push(`step ${n + 1}: a temperature or size changed`); if (digitsOf(s) !== digitsOf(o)) bad.push(`step ${n + 1}: a number changed`); });
+  (src.ingredients || []).forEach((i, n) => { const o = t.ingredients?.[n] || {}; if (digitsOf([i.name, i.note].join(" ")) !== digitsOf([o.name, o.note].join(" "))) bad.push(`“${i.name}”: a number changed`); });
+  for (const k of ["notes", "servingsText"]) if (src[k] && digitsOf(src[k]) !== digitsOf(t[k])) bad.push(`${k}: a number changed`);
+  return bad;
+}
+async function translate(lang) {
+  const r = recipeById(S.detail); const st = document.getElementById("tr-status");
+  if (!S.sample) { st.className = "status err"; st.textContent = "Translating needs Claude. Ask in chat and it arrives with the next update."; return; }
+  const payload = { title: r.title, servingsText: r.servingsText || null, notes: r.notes || null, incomplete: r.incomplete || null,
+    ingredients: r.ingredients.map(i => ({ name: i.name, note: i.note || null, group: i.group || null, u: i.u && !STD_UNITS.has(i.u.toLowerCase()) ? i.u : null })), steps: r.steps || [] };
+  st.className = "status"; st.textContent = `Claude is translating into ${LANG[lang]}…`;
+  try {
+    const t = await S.sample.json(TR_PROMPT(lang, payload));
+    const bad = validateTranslation(payload, t);
+    if (bad.length) { st.className = "status err"; st.textContent = "Not saved: the translation changed something (" + bad.slice(0, 2).join("; ") + "). Try again."; return; }
+    const clean = { title: t.title, servingsText: t.servingsText ?? null, notes: t.notes ?? null, incomplete: t.incomplete ?? null, steps: t.steps,
+      ingredients: t.ingredients.map((x, n) => { const o = { name: String(x.name || r.ingredients[n].name), note: x.note ?? null, group: x.group ?? null }; if (payload.ingredients[n].u && x.u) o.u = String(x.u); return o; }), at: Date.now() };
+    await S.db.doc("recipes/" + r.id).update({ translations: { [lang]: clean } });
+    S.viewLang = lang; render();
+  } catch (e) {
+    st.className = "status err";
+    st.textContent = e?.code === "not_granted" ? "Claude wasn't allowed to help on this page." : e?.code === "rate_limited" ? "Too many requests. Try again in a minute." : "The translation didn't finish. Try again.";
+  }
+}
+
+// ---------- toast ----------
+let tt;
+function toast(msg) { let el = document.querySelector(".toast"); if (!el) { el = document.createElement("div"); el.className = "toast"; el.setAttribute("role", "status"); document.body.append(el); } el.textContent = msg; clearTimeout(tt); tt = setTimeout(() => el.remove(), 2800); }
+
+// ---------- events ----------
+document.addEventListener("click", async e => {
+  const t = e.target.closest("[data-act]"); if (!t) return;
+  const act = t.dataset.act, v = t.dataset.v;
+  if (act === "scrim" && e.target !== t) return;
+  switch (act) {
+    case "units": S.units = v; save("olla-units", v); render(); break;
+    case "tab": S.view = v; S.detail = null; S.confirmClearAll = false; render(); window.scrollTo(0, 0); break;
+    case "season": S.season = v || null; render(); break;
+    case "cat": S.cat = v || null; render(); break;
+    case "clear-filters": S.season = null; S.cat = null; render(); break;
+    case "open": { S.detail = t.dataset.id; S.servings = null; S.mult = 1; S.confirmDelete = null; const r = recipeById(S.detail); S.viewLang = S.prefLang !== "orig" && r?.translations?.[S.prefLang] ? S.prefLang : null; render(); window.scrollTo(0, 0); break; }
+    case "back": S.detail = null; render(); break;
+    case "sv": { const r = recipeById(S.detail); if (r.servings) S.servings = Math.max(1, (S.servings || r.servings) + Number(v)); else S.mult = Math.max(.5, S.mult + Number(v) * .5); render(); break; }
+    case "lang": { const r = recipeById(S.detail); if (v === "orig") { S.viewLang = null; render(); } else if (r.translations?.[v]) { S.viewLang = v; render(); } else translate(v); break; }
+    case "fav": { const r = recipeById(S.detail); try { await S.db.doc("recipes/" + r.id).update({ favorite: !r.favorite }); } catch { toast("Couldn't save. Try again."); } break; }
+    case "del": S.confirmDelete = S.detail; render(); break;
+    case "del-no": S.confirmDelete = null; render(); break;
+    case "del-yes": { const id = S.detail; S.detail = null; S.confirmDelete = null; render(); try { await S.db.doc("recipes/" + id).delete(); toast("Page torn out"); } catch { toast("Couldn't delete. Try again."); } break; }
+    case "clear-examples": await Promise.all(S.recipes.filter(r => r.example).map(r => S.db.doc("recipes/" + r.id).delete().catch(() => {}))); toast("Examples removed"); break;
+    case "add-shop": openShopSheet(); break;
+    case "settings": openSettings(); break;
+    case "flag-src": { const on = !S.settings.showSourceLink; S.settings = { ...S.settings, showSourceLink: on }; openSettings(); render(); try { await S.db.doc("settings/app").set({ showSourceLink: on }); } catch { toast("Couldn't save the setting."); } break; }
+    case "pref-lang": S.prefLang = v; save("olla-lang", v); openSettings(); render(); break;
+    case "close": case "scrim": closeSheet(); break;
+    case "shop-confirm": {
+      const r0 = recipeById(S.detail); const f = factorOf(r0);
+      const picks = [...layer.querySelectorAll("input[data-n]:checked")].map(x => r0.ingredients[+x.dataset.n]);
+      closeSheet(); const now = Date.now();
+      try { await Promise.all(picks.map((i, k) => S.db.collection("shopping").add({ name: i.name, q: i.q == null ? null : i.q * f, q2: null, u: i.u || null, gpc: i.gpc || null, aisle: i.aisle || "other", recipeId: r0.id, recipeTitle: r0.title, checked: false, createdAt: now + k }))); toast(`${picks.length} on the list`); }
+      catch { toast("Some items didn't save. Try again."); }
+      break;
+    }
+    case "toggle": { const ids = t.dataset.ids.split(","); const to = t.dataset.c !== "true"; try { await Promise.all(ids.map(id => S.db.doc("shopping/" + id).update({ checked: to }))); } catch { toast("Couldn't update. Try again."); } break; }
+    case "clear-done": await Promise.all(S.shop.filter(i => i.checked).map(i => S.db.doc("shopping/" + i.id).delete().catch(() => {}))); break;
+    case "clear-all": S.confirmClearAll = true; render(); break;
+    case "clear-all-no": S.confirmClearAll = false; render(); break;
+    case "clear-all-yes": S.confirmClearAll = false; await Promise.all(S.shop.map(i => S.db.doc("shopping/" + i.id).delete().catch(() => {}))); toast("A fresh list"); break;
+    case "import": openImport(); break;
+    case "import-go": runImport(); break;
+  }
+});
+document.addEventListener("input", e => { if (e.target.id === "q") { S.q = e.target.value; const pos = e.target.selectionStart; render(); const q = document.getElementById("q"); q.focus(); try { q.setSelectionRange(pos, pos); } catch {} } });
+document.addEventListener("change", e => { if (e.target.hasAttribute?.("data-lang")) { const v = e.target.value, r = recipeById(S.detail); if (v === "orig") { S.viewLang = null; render(); } else if (r.translations?.[v]) { S.viewLang = v; render(); } else translate(v); return; } const f = e.target.dataset?.filter; if (f) { S[f] = e.target.value || null; render(); document.querySelector(`[data-filter="${f}"]`)?.focus(); } });
+document.addEventListener("submit", async e => {
+  if (e.target.id !== "shop-form") return; e.preventDefault();
+  const inp = document.getElementById("shop-new"); const name = inp.value.trim(); if (!name || !S.db) return; inp.value = "";
+  try { await S.db.collection("shopping").add({ name, q: null, u: null, gpc: null, aisle: "other", recipeId: null, recipeTitle: null, checked: false, createdAt: Date.now() }); } catch { toast("Couldn't add that. Try again."); }
+  document.getElementById("shop-new")?.focus();
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape" && layer.innerHTML) closeSheet(); });
+
+boot();
+})();
+</script>
